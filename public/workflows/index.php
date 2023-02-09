@@ -1,8 +1,10 @@
 <?php
 
 /**
- * This script searches the current directory for files ending with '.nox.yaml'
- * and returns their name, size, and shaChecksum in a JSON format
+ * This script searches the tenant directory for files ending with '.nox.yaml'
+ * and returns an index with their name, size, and shaChecksum in a JSON format
+ *
+ * It returns the file contents if the file name is specified in the URL
  */
  
 $thisFolder = join('/', array_slice(explode('/', $_SERVER['SCRIPT_NAME']), 0, -1)).'/';
@@ -19,7 +21,7 @@ if (substr($targetFile, 0, strlen($thisFolder)) !== $thisFolder) {
 if (empty($tenant)) {
     http_response_code(404);
     die();
-}
+}*
 
 $tenantDirectory = '/home/noxorg/public_ftp/incoming/' . $tenant . '/'; 
 
