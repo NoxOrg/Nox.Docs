@@ -1,10 +1,8 @@
 <?php
 
 /**
- * This script searches the tenant directory for files ending with '.nox.yaml'
- * and returns an index with their name, size, and shaChecksum in a JSON format
- *
- * It returns the file contents if the file name is specified in the URL
+ * This script searches the current directory for files ending with '.nox.yaml'
+ * and returns their name, size, and shaChecksum in a JSON format
  */
  
 $thisFolder = join('/', array_slice(explode('/', $_SERVER['SCRIPT_NAME']), 0, -1)).'/';
@@ -16,35 +14,35 @@ if (substr($targetFile, 0, strlen($thisFolder)) !== $thisFolder) {
     die();
 }
 
-[$tenant,$file] = explode('/',substr($targetFile, strlen($thisFolder)));
+[$tenant,$requestedFile] = explode('/',substr($targetFile, strlen($thisFolder)));
 
 if (empty($tenant)) {
     http_response_code(404);
     die();
-}*
+}
 
-$tenantDirectory = '/home/noxorg/public_ftp/incoming/' . $tenant . '/'; 
+$tenantFolder = '/home/noxorg/public_ftp/incoming/' . $tenant . '/'; 
 
-if(empty($file)) {
+if(empty($requestedFile)) {
 
-    if (!is_dir($tenantDirectory)) {
+    if (!is_dir($tenantFolder)) {
         http_response_code(404);
         die();
     }
     header('Content-Type: text/x-yaml');
-    displayIndex($tenantDirectory);
+    displayIndex($tenantFolder);
 }
 else {
     
-    $fullFilePath = $tenantDirectory.'/'.$file;
+    $requestedFilePath = $tenantFolder.'/'.$requestedFile;
     
-    if (!file_exists($tenantDirectory)) {
+    if (!file_exists($requestedFilePath)) {
         http_response_code(404);
         die();
     }
     ob_clean();
     header('Content-Type: text/x-yaml');
-    echo file_get_contents($fullFilePath);
+    echo file_get_contents($requestedFilePath);
 }
 
 function displayIndex($tenantDirectory) {
