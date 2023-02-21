@@ -19,6 +19,9 @@ jobs:
         with:
           node-version: 18.13.0
           
+      - name: Installing packages
+        run: npm install
+
       - name: Build site
         run: npm run build
 
