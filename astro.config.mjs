@@ -10,5 +10,6 @@ export default defineConfig({
 		// Enable React for the Algolia search component.
 		react(),
 	],
-	site: `https://astro.build`,
+	site: 'https://noxorg.dev',
+	base: '/site',
 });
