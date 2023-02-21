@@ -32,5 +32,5 @@ jobs:
           username: ${{ secrets.ftp_user }}
           password: ${{ secrets.ftp_password }}
           protocol: ftps
-          local-dir: ./dist
+          local-dir: ./dist/
           dangerous-clean-slate: true
