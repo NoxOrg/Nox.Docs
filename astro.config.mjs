@@ -10,6 +10,5 @@ export default defineConfig({
 		// Enable React for the Algolia search component.
 		react(),
 	],
-	site: 'https://noxorg.dev',
-	base: '/site',
+	site: `https://noxorg.dev/site`,
 });
