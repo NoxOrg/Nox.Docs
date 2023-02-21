@@ -19,9 +19,8 @@ jobs:
         with:
           node-version: 18.13.0
           
-      - name: Build site
-        run: npm build
-        
+      - run: npm build
+
       - name: Upload files to site
         uses: SamKirkland/FTP-Deploy-Action@4.3.3
         with:
