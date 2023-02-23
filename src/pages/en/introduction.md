@@ -4,6 +4,14 @@ description: Docs intro
 layout: ../../layouts/MainLayout.astro
 ---
 
+[Nox](https://github.com/NoxOrg) is a set of developer and DevOps engineer productivity tools that lets you spend less time on tedious coding and configuration tasks, and more time efficiently implementing domain solutions to address your business challenges.
+
+<div align="center">
+    <img src="https://noxorg.dev/docs/images/nox-cli_simple-overview.png" alt="Overview" width="100%">
+</div>
+
+## Features
+
 Nox lets you focus on your business problem and domain, and provides you with the following auto-magic features:-
 
 - Declaration of your core application and domain (models, data, entities, attributes and bounded contexts) in a declaritive and easily maintainable way (YAML, using YamlDotNet)
