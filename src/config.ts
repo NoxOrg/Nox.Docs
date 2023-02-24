@@ -50,26 +50,20 @@ export const SIDEBAR: Sidebar = {
 	en: {
 		'Overview': [
 			{ text: 'Introduction', link: 'en/introduction' },
-			{ text: 'How It Works', link: 'en/how-it-works' },
-			{ text: 'Getting Started', link: 'en/page-2' },
+			{ text: 'How does it work?', link: 'en/how-it-works' },
+			{ text: 'Let\'s get started', link: 'en/getting-started'}
 		],
 		'Nox.Lib': [
 			{ text: 'About', link: 'en/nox.lib-about' },
 			{ text: 'Sample Project', link: 'en/nox.lib-sample-project' },
 			{ text: 'Exploring the API', link: 'en/nox.lib-exploring-the-api' },
-			{ text: 'Loaders', link: 'en/page-4' },
 		],
 		'Nox.Cli': [
 			{ text: 'About', link: 'en/nox.cli-about' },
 			{ text: 'Installation', link: 'en/nox.cli-installation' },
 			{ text: 'Sample Project', link: 'en/nox.cli-sample-project' },
 			{ text: 'Manifest File', link: 'en/nox.cli-manifest-file' },
-		],
-		'Api': [
-			{ text: 'Rest/OData', link: 'en/page-4' },
-			{ text: 'GraphQL', link: 'en/page-4' },
-			{ text: 'gRPC', link: 'en/page-4' },
-		],
+		]
 	},
 };
 

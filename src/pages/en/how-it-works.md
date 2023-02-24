@@ -1,5 +1,5 @@
 ---
-title: How It Works
+title: How does it work?
 description: Docs intro
 layout: ../../layouts/MainLayout.astro
 ---
@@ -21,3 +21,5 @@ From a development perspective, once the `project definition file` is placed in 
 
 #### DevOps Engineers
 From a DevOps Engineer perspective, the `project definition file` is referenced via a series of command–line instructions that can propogate environments (DEV, UAT, PROD, etc.), set up version control repositories, user groups & permissions as well as commissioning databases.
+
+Let's [get started](./getting-started)
