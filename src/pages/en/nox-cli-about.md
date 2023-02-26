@@ -1,5 +1,6 @@
 ---
-title: About Nox.Cli
+title: About
+category: Nox.Cli
 description: Docs intro
 layout: ../../layouts/MainLayout.astro
 ---

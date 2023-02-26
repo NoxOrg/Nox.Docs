@@ -1,5 +1,6 @@
 ---
 title: Introduction
+category: Nox
 description: Docs intro
 layout: ../../layouts/MainLayout.astro
 ---

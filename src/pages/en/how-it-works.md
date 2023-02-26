@@ -1,5 +1,6 @@
 ---
 title: How does it work?
+category: Nox
 description: Docs intro
 layout: ../../layouts/MainLayout.astro
 ---

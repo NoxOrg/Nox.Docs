@@ -1,0 +1,26 @@
+name: Build Test
+
+on:
+  pull_request:
+    branches: [ main ]
+  push:
+    branches: [ main ]
+
+jobs:
+  test-build:
+    name: Build test
+    runs-on: ubuntu-latest  
+    steps:
+      - name: Get the latest code
+        uses: actions/checkout@v3
+        
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.13.0
+          
+      - name: Installing packages
+        run: npm install
+
+      - name: Build site
+        run: npm run build
