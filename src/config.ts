@@ -60,7 +60,7 @@ export const SIDEBAR: Sidebar = {
 			{ text: 'Exploring the API', link: 'en/nox-lib-exploring-the-api' },
 		],
 		'Nox.Cli': [
-			{ text: 'About', link: 'en/nox.cli-about' },
+			{ text: 'About', link: 'en/nox-cli-about' },
 			{ text: 'Installation', link: 'en/nox-cli-installation' },
 			{ text: 'Sample Project', link: 'en/nox-cli-sample-project' },
 			{ text: 'Manifest File', link: 'en/nox-cli-manifest-file' },
