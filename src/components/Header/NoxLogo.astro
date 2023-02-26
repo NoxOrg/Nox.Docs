@@ -1,8 +1,22 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg width="100%" height="100%" viewBox="0 0 1080 1080" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+---
+type Props = {
+	size: number;
+};
+const { size } = Astro.props;
+---
+
+<svg
+	class="logo"
+	width={size}
+	height={size}
+	viewBox="0 0 1080 1080"
+	fill="none"
+	xmlns="http://www.w3.org/2000/svg"
+>
+
+	<title>Logo</title>
     <g transform="matrix(0.94943,-0.622475,0.622475,0.94943,-436.918,338.316)">
-        <g id="Logo--Assets-" serif:id="Logo (Assets)">
+        <g id="Logo--Assets-">
             <g transform="matrix(0.999926,-0.012175,0.012175,0.999926,-2.10275,-1.8057)">
                 <path d="M156.391,705.475L156.422,832.203C156.422,832.203 242.218,829.294 306.786,744.989C371.355,660.684 562.843,412.434 562.843,412.434L432.826,287.1L156.391,705.475Z" style="fill:rgb(163,170,175);"/>
             </g>
