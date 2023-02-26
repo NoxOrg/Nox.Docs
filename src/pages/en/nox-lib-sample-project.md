@@ -126,7 +126,7 @@ attributes:
 ### Setup SqlServer with Docker
 ---
 Create a `docker-compose.yaml` for running a Sql Server conatainer
-```YAML
+```yaml
 version: '3.7'
 
 services:

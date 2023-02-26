@@ -46,49 +46,26 @@ export type Sidebar = Record<
 	typeof KNOWN_LANGUAGE_CODES[number],
 	Record<string, { text: string; link: string }[]>
 >;
+
 export const SIDEBAR: Sidebar = {
 	en: {
 		'Overview': [
 			{ text: 'Introduction', link: 'en/introduction' },
 			{ text: 'How does it work?', link: 'en/how-it-works' },
-			{ text: 'Let\'s get started', link: 'en/getting-started'}
+			{ text: 'Let\'s get started', link: 'en/getting-started'},
 		],
 		'Nox.Lib': [
-			{ text: 'About', link: 'en/nox.lib-about' },
-			{ text: 'Sample Project', link: 'en/nox.lib-sample-project' },
-			{ text: 'Exploring the API', link: 'en/nox.lib-exploring-the-api' },
+			{ text: 'About', link: 'en/nox-lib-about' },
+			{ text: 'Sample Project', link: 'en/nox-lib-sample-project' },
+			{ text: 'Exploring the API', link: 'en/nox-lib-exploring-the-api' },
 		],
 		'Nox.Cli': [
 			{ text: 'About', link: 'en/nox.cli-about' },
-			{ text: 'Installation', link: 'en/nox.cli-installation' },
-			{ text: 'Sample Project', link: 'en/nox.cli-sample-project' },
-			{ text: 'Manifest File', link: 'en/nox.cli-manifest-file' },
+			{ text: 'Installation', link: 'en/nox-cli-installation' },
+			{ text: 'Sample Project', link: 'en/nox-cli-sample-project' },
+			{ text: 'Manifest File', link: 'en/nox-cli-manifest-file' },
 		]
 	},
 };
 
-export const SIDEBAR_DOCS: Sidebar = {
-	en: {
-		'Overview': [
-			{ text: 'Introduction', link: 'en/introduction' },
-			{ text: 'Getting Started', link: 'en/page-2' },
-		],
-		'Core': [
-			{ text: 'Services', link: 'en/nox.lib-about' },
-			{ text: 'Entities', link: 'en/page-4' },
-			{ text: 'Attributes', link: 'en/page-4' },
-			{ text: 'Loaders', link: 'en/page-4' },
-		],
-		'Data': [
-			{ text: 'SqlServer', link: 'en/page-4' },
-			{ text: 'Postgres', link: 'en/page-4' },
-			{ text: 'MySql', link: 'en/page-4' },
-			{ text: 'Json', link: 'en/page-4' },
-		],
-		'Api': [
-			{ text: 'Rest/OData', link: 'en/page-4' },
-			{ text: 'GraphQL', link: 'en/page-4' },
-			{ text: 'gRPC', link: 'en/page-4' },
-		],
-	},
-};
+
