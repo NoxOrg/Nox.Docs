@@ -13,7 +13,7 @@ layout: ../../layouts/MainLayout.astro
 
 ## Features
 
-Nox lets you focus on your business problem and domain, and provides you with the following auto-magic features:-
+Nox lets you focus on your business problem and domain, and provides you with the following auto-magic features:
 
 - Declaration of your core application and domain (models, data, entities, attributes and bounded contexts) in a declaritive and easily maintainable way (YAML, using YamlDotNet)
 - Automatic (and selective) Create, Read, Update and Delete (CRUD) API for entities and/or aggregate roots (supports REST with OData, with GraphQL and gRPC in the making)

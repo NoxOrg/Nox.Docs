@@ -9,7 +9,7 @@ The development project built for our [Nox](https://github.com/NoxOrg/Nox) sampl
 
 ### Defining the Project
 
-Running the `nox new` command outlines its usage options as seen below: -
+Running the `nox new` command outlines its usage options as seen below:
 
 ```powershell
 nox new
@@ -21,7 +21,7 @@ nox new
     <br/>
 </div>
 
-Let's create a folder for our project and run the `nox new service` command from within the newly created folder: -
+Let's create a folder for our project and run the `nox new service` command from within the newly created folder:
 
 ```powershell
 mkdir CurrencyConverter

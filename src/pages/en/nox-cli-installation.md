@@ -16,17 +16,17 @@ If you don't have .NET installed you can download the latest version [here](http
 
 ### Install the Nox.Cli tool
 ---
-The Nox.Cli tool is hosted on nuget.org [here](https://www.nuget.org/packages/Nox.Cli) and additional installation options are detailed there. The recommended installation method is outlined below: -
+The Nox.Cli tool is hosted on nuget.org [here](https://www.nuget.org/packages/Nox.Cli) and additional installation options are detailed there. The recommended installation method is outlined below:
 ```powershell
 dotnet tool install --global Nox.Cli
 ```
-Running the Nox.Cli tool installation with the global option yields the following output: -
+Running the Nox.Cli tool installation with the global option yields the following output:
 
 <div align="center">
     <img src="https://noxorg.dev/docs/images/nox-cli_install-clean.png" alt="Overview" width="100%">
 </div>
 
-Running Nox.Cli for the first time yields the following output: -
+Running Nox.Cli for the first time yields the following output:
 
 ```powershell
 nox
@@ -38,7 +38,7 @@ nox
     <br/>
 </div>
 
-> 💡 You may notice from the screenshot that if you are logged in to Azure it will automatically use these credentials. In the event that you're not logged into Azure you will be redirected to Microsoft login screen in a browser: -
+> 💡 You may notice from the screenshot that if you are logged in to Azure it will automatically use these credentials. In the event that you're not logged into Azure you will be redirected to Microsoft login screen in a browser:
 
 <div align="center">
     <img src="https://noxorg.dev/docs/images/windows_login-selection.png" alt="Overview">

@@ -5,7 +5,7 @@ description: Docs intro
 layout: ../../layouts/MainLayout.astro
 ---
 ***
-[Nox.Lib](https://github.com/NoxOrg/Nox) is a .NET microservice framework that allows developers to rapidly build, maintain and deploy enterprise–grade, production–ready microservices. 
+[Nox.Lib](https://github.com/NoxOrg/Nox) is a .NET microservice framework that allows developers to rapidly build, maintain and deploy enterprise-grade, production-ready microservices. 
 
 It removes all the ceremony, repetition and technical details associated with building and maintaining applications without constraining developer creativity or control in any way.
 
