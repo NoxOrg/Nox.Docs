@@ -5,7 +5,7 @@ description: Docs intro
 layout: ../../layouts/MainLayout.astro
 ---
 ***
-The manifest file is tasked with propogating the enterprise–level configurations related to our project. It is hosted in a tenant–specific folder on the Nox website and would typically be maintained by the DevOps team.
+The manifest file is tasked with propogating the enterprise-level configurations related to our project. It is hosted in a tenant-specific folder on the Nox website and would typically be maintained by the DevOps team.
 
 <div align="center">
     <img src="https://noxorg.dev/docs/images/vscode_manifest-yaml.png" alt="Overview">
@@ -15,7 +15,7 @@ The manifest file is tasked with propogating the enterprise–level configuratio
 
 Firstly, the `secrets:` section is where we link to our secrets provider and vault url.
 
-The `branches:` section is where we specify the command 'categories'—for the lack of a more tech–propriate term.
+The `branches:` section is where we specify the command 'categories'—for the lack of a more tech-propriate term.
 You'll recall from running the `nox` command previously that it listed the `new`, `sync` and `version` commands as options. We'll disregard the `logout` command for now as it's baked into the tool. You will however see how these three commands have been propogated from the manifest file.
 
 <div align="center">
@@ -42,7 +42,7 @@ Similarly, in the `SyncDatabaseScript.workflow.nox.yaml` example below, we can s
     <br/>
 </div>
 
-And the output when running the `nox sync` command without any arguments reflect this: -
+And the output when running the `nox sync` command without any arguments reflect this:
 
 <div align="center">
     <img src="https://noxorg.dev/docs/images/nox-cli_sync-database-highlighted.png" alt="Overview">
@@ -50,4 +50,4 @@ And the output when running the `nox sync` command without any arguments reflect
     <br/>
 </div>
 
-Finally, the `remote-task-proxy:` section points to the url and authorisation–provide for the remote task executor which will conver in more detail later.
+Finally, the `remote-task-proxy:` section points to the url and authorisation-provide for the remote task executor which will conver in more detail later.
