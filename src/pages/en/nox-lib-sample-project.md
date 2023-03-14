@@ -7,7 +7,7 @@ layout: ../../layouts/MainLayout.astro
 ### Prerequisites
 ---
 
-Make sure you have .NET 6 or later and Docker installed on your PC.
+Make sure you have .NET 6 and Docker installed on your PC.
 ```powershell
 dotnet --version
 
@@ -29,23 +29,29 @@ Add the Nox.Lib nuget package to your project.
 ```powershell
 dotnet add package Nox.Lib
 ```
-Edit your Program.cs file and add the following three lines:
+Edit your Program.cs file and add/modify the following 👇 code sections:
 ```csharp
-using Nox; // <--- Add this (1) <---
+// (1) 👇 Add the following use library statement
+using Nox;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddNox(); // <--- Add this (2) <---
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+
+// (2) 👇 The Nox library has Swagger built-in. Comment the line below out.
+//builder.Services.AddSwaggerGen();
+
+// (3) 👇 Add Nox to the service collection
+builder.Services.AddNox();
 
 var app = builder.Build();
 
-app.UseNox(); // <--- Add this (3) <---
+// (4) 👇 Add Nox to the application middleware
+app.UseNox();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -75,6 +81,8 @@ Create a new file to define your service called `SampleCurrency.service.nox.yaml
 name: SampleCurrencyService
 
 description: Sample Currency Microservice
+
+autoMigrations: true
 
 database:
   name: SampleCurrencyDb
