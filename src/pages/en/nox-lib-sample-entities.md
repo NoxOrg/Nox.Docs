@@ -25,10 +25,6 @@ table: Country
 schema: dbo
 
 relatedParents: [Currency]
-
-messaging:
-  - messagingProvider: Mediator
-  - messagingProvider: AppServiceBus
     
 attributes:
 
@@ -197,6 +193,22 @@ And reviewing the ```SampleCurrencyDb``` in your database utitily of choice will
 
 <div align="center">
     <img src="https://noxorg.dev/docs/images/dbeaver_country-exchange-tables.png" alt="Overview" width="100%">
+    <br>
+</div>
+
+### A note on data relations and foreign keys
+
+The eagle-eyed among you may have noticed that when we declared our ```Country``` and ```CurrencyExchange``` entities, we used the ```relatedParents``` property to specify a relation to the ```Currency``` entity.
+
+<div align="center">
+    <img src="https://noxorg.dev/docs/images/vscode_sample-related-parents.png" alt="Overview" width="100%">
+    <br>
+</div>
+
+And if we expand the ER diagram of our ```Country``` and ```ExchangeRate``` tables, we will notice that the Nox library have scaffolded our database relations as well as foreign keys and indexes.
+
+<div align="center">
+    <img src="https://noxorg.dev/docs/images/dbeaver_sample-foreign-keys.png" alt="Overview" width="100%">
     <br>
 </div>
 
