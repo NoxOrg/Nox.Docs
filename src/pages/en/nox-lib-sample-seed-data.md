@@ -17,7 +17,7 @@ For our sample project we've sourced and compiled country, currency and exchange
 
 Let's start by creating a ```./Data``` folder in the root folder of our project and copy all the data files contained in [this folder](https://github.com/NoxOrg/Nox/tree/main/docs/sample-data) into our newly created folder.
 
-### Loader files
+### Creating a Loader file
 
 We can specify data sources for our project entities by adding a ```<your service>.loader.nox.yaml``` file in their relevant folders in the ```./Design``` directory.
 
@@ -53,10 +53,6 @@ loadStrategy:
 target:
   entity: Country
   
-messaging:
-  - messagingProvider: Mediator
-  - messagingProvider: AppServiceBus
-  
 sources:
   - dataSource: JsonSeedData
     minimumExpectedRecords: 160
@@ -87,13 +83,39 @@ loadStrategy:
 
 target:
   entity: Currency
-  
-messaging:
-  - messagingProvider: AppServiceBus
-  - messagingProvider: Mediator  
 
 sources:
   - dataSource: JsonSeedData
-    minimumExpectedRecords: 160
     query: currency-seeddata.json 
 ```
+
+### Specifying data source properties
+
+Now that we've specifed the sources of our data for our entities, we need to tell the extract module where to find this data. We'll head back to ```./Design/SampleCurrency.service.nox.yaml``` and add a new ```dataSources``` node to our file:
+
+```yaml
+dataSources:
+  - name: JsonSeedData
+    provider: json
+    options: Source=File;Path=../../docs/sample-data/;
+```
+<div align="center">
+    <img src="https://noxorg.dev/docs/images/vscode_sample-data-sources.png" alt="Overview" width="100%">
+    <br>
+</div>
+
+### Let's seed our data
+
+All that remains is to save our new design files and run the project. Have a look at the highlighted areas in the Terminal output below:
+
+<div align="center">
+    <img src="https://noxorg.dev/docs/images/terminal_sample-seeded-data.png" alt="Overview" width="100%">
+    <br>
+</div>
+
+You'll notice that the Nox ETL module has extracted 117 ```Currency``` and 179 ```Country``` records from the respective specified data sources. And the database graphic below confirms that:
+
+<div align="center">
+    <img src="https://noxorg.dev/docs/images/dbeaver_sample-seeded-data.png" alt="Overview" width="100%">
+    <br>
+</div>
