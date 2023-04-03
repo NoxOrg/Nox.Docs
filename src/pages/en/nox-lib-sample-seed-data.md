@@ -119,3 +119,5 @@ You'll notice that the Nox ETL module has extracted 117 ```Currency``` and 179 `
     <img src="https://noxorg.dev/docs/images/dbeaver_sample-seeded-data.png" alt="Overview" width="100%">
     <br>
 </div>
+
+Let's take a look at how Nox manages [background jobs](./nox-lib-sample-jobs).
