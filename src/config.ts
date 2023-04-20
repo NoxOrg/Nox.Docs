@@ -65,9 +65,9 @@ export const SIDEBAR: Sidebar = {
 			{ text: 'Database Migrations', link: 'en/nox-lib-sample-db-migrations' },
 			{ text: 'Adding Entities', link: 'en/nox-lib-sample-entities' },
 			{ text: 'Seeding Data', link: 'en/nox-lib-sample-seed-data' },
-			{ text: 'Revisit the APIs', link: 'en/nox-lib-sample-api' },
 			{ text: 'Getting to know Nox jobs', link: 'en/nox-lib-sample-jobs' },
 			{ text: 'Messaging Providers', link: 'en/nox-lib-sample-messaging' },
+			{ text: 'Bringing it all together', link: 'en/nox-lib-sample-seed-exchange-rates' },
 		],
 		'Nox.Cli': [
 			{ text: 'About', link: 'en/nox-cli-about' },

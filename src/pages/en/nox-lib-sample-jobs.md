@@ -43,3 +43,5 @@ Clicking the ***Jobs > Succeeded*** tab of the Hangfire dashboard shows us that 
     <img src="https://noxorg.dev/docs/images/localhost_sample-hangfire-succeeded-jobs.png" alt="Overview" width="100%">
     <br>
 </div>
+
+Let's take a look at how Nox handles [events and messaging](./nox-lib-sample-messaging).
