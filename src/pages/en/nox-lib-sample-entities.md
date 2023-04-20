@@ -212,4 +212,4 @@ And if we expand the ER diagram of our ```Country``` and ```ExchangeRate``` tabl
     <br>
 </div>
 
-Finally we can move to the exciting part, let's [source and import some data into our project](./nox-lib-sample-seed-data).
+Next we'll move on to the exciting part, let's [source and import some data into our project](./nox-lib-sample-seed-data).

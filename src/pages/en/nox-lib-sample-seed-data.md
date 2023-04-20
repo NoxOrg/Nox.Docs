@@ -13,7 +13,7 @@ For this section of our sample project we'll look at the following actions:
 
 Nox's [ETL](https://en.wikipedia.org/wiki/Extract,_transform,_load) module supports various data formats including SQL datasources, JSON, CSV, EXCEL, XML, and Parquet.
 
-For our sample project we've sourced and compiled country, currency and exchange rate data in a few different formats. To keep things simple for a start we'll use single input files, country and currency in JSON format and an exchange rate file in CSV format.
+For our sample project we've sourced and compiled country, currency and exchange rate data in a few different formats. To keep things simple for a start we'll only configure our project to import country and currency data in JSON format. [Later](./nox-lib-sample-seed-exchange-rates) in the project we'll include exchange rate data files in CSV, Excel, XML and Parquet formats.
 
 Let's start by creating a ```./Data``` folder in the root folder of our project and copy all the data files contained in [this folder](https://github.com/NoxOrg/Nox/tree/main/docs/sample-data) into our newly created folder.
 
@@ -97,7 +97,7 @@ Now that we've specifed the sources of our data for our entities, we need to tel
 dataSources:
   - name: JsonSeedData
     provider: json
-    options: Source=File;Path=../../docs/sample-data/;
+    options: Source=File;Path=./Data/;
 ```
 <div align="center">
     <img src="https://noxorg.dev/docs/images/vscode_sample-data-sources.png" alt="Overview" width="100%">
