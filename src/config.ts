@@ -56,8 +56,18 @@ export const SIDEBAR: Sidebar = {
 		],
 		'Nox.Lib': [
 			{ text: 'About', link: 'en/nox-lib-about' },
-			{ text: 'Sample Project', link: 'en/nox-lib-sample-project' },
+			{ text: 'Quick-start Project', link: 'en/nox-lib-quick-start-project' },
 			{ text: 'Exploring the API', link: 'en/nox-lib-exploring-the-api' },
+		],
+		'Sample Project': [
+			{ text: 'Overview', link: 'en/nox-lib-sample-project-overview' },
+			{ text: 'The Design Folder', link: 'en/nox-lib-design-folder' },
+			{ text: 'Database Migrations', link: 'en/nox-lib-sample-db-migrations' },
+			{ text: 'Adding Entities', link: 'en/nox-lib-sample-entities' },
+			{ text: 'Seeding Data', link: 'en/nox-lib-sample-seed-data' },
+			{ text: 'Getting to know Nox jobs', link: 'en/nox-lib-sample-jobs' },
+			{ text: 'Messaging Providers', link: 'en/nox-lib-sample-messaging' },
+			{ text: 'Bringing it all together', link: 'en/nox-lib-sample-seed-exchange-rates' },
 		],
 		'Nox.Cli': [
 			{ text: 'About', link: 'en/nox-cli-about' },
