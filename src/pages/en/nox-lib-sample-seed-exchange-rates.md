@@ -138,7 +138,7 @@ Doing a GET request on our ```/api/ExchangeRates``` endpoint via Postman confirm
 
 The ```Rate``` value of the sample data shows the exchange rate in relation to the Swiss Franc. Whilst browsing our source exchange rate data earlier you may have noticed records with a ```Rate``` = 1, of which the ```CurrencyId``` were 756.
 
-Doing a GET request on our ```/api/ExchangeRates(756)``` endpoint via Postman shows us that our reference currency is indeed.
+Doing a GET request on our ```/api/ExchangeRates(756)``` endpoint via Postman shows us that our reference currency is indeed the Swiss Franc.
 
 <div align="center">
     <img src="https://noxorg.dev/docs/images/postman_sample-currency-get-swissfranc.png" alt="Overview" width="100%">
