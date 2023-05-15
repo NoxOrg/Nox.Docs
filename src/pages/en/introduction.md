@@ -5,7 +5,7 @@ description: Docs intro
 layout: ../../layouts/MainLayout.astro
 ---
 
-[Nox](https://github.com/NoxOrg) is a set of developer and DevOps engineer productivity tools that lets you spend less time on tedious coding and configuration tasks, and more time efficiently implementing domain solutions to address your business challenges.
+[Nox](https://github.com/NoxOrg) is a set of developer and DevOps productivity tools that lets you spend less time on tedious coding and configuration tasks, and more time efficiently implementing domain solutions to address your business challenges.
 
 <div align="center">
     <img src="https://noxorg.dev/docs/images/nox-cli_simple-overview.png" alt="Overview" width="100%">

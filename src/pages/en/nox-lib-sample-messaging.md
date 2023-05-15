@@ -226,30 +226,33 @@ namespace SampleListener.Consumers
 
 The ```Consume``` method is where you can add the code that you'd like to run. We'll keep things simple by writing which currency has been updated.
 
-Running our SampleListener application reveals a few areas of interest. Firstly when we examine the RabbitMQ console we'll notice that we now have an additional connection and exchange for our Listener.
+Running our SampleListener application reveals a few areas of interest. When we examine the RabbitMQ console we'll notice that we now have an additional ```SampleListener``` connection for our Listener.
 
 <div align="center">
     <img src="https://noxorg.dev/docs/images/localhost_sample-rabbitmq-connections2.png" alt="Overview" width="100%">
     <br>
 </div>
+And in addition to the new connection, we'll notice that a ```currency-updated-event``` exchange has also been created.
 <div align="center">
     <img src="https://noxorg.dev/docs/images/localhost_sample-rabbitmq-exchanges2.png" alt="Overview" width="100%">
     <br>
 </div>
 
-Secondly, if we click on the 'Queues' tab we now have a queue for our ```currency-updated-event```
+If we click on the 'Queues' tab we now have a queue for our ```currency-updated-event```
 
 <div align="center">
     <img src="https://noxorg.dev/docs/images/localhost_sample-rabbitmq-queues2.png" alt="Overview" width="100%">
     <br>
 </div>
 
-If we change Bitcoin to Dogecoin via the API we get confirmation via our application console that our ```CurrencyUpdatedDomainEvent``` has been triggered and successfully picked up by our listener class:
+Let's change Bitcoin to Dogecoin via the API as per the Postman screen below:
 
 <div align="center">
     <img src="https://noxorg.dev/docs/images/postman_sample-currency-put-dogecoin.png" alt="Overview" width="100%">
     <br>
 </div>
+
+We get confirmation via our application console that our ```CurrencyUpdatedDomainEvent``` has been triggered and successfully picked up by our listener class:
 <div align="center">
     <img src="https://noxorg.dev/docs/images/terminal_sample-listener-currency-updated-dogecoin.png" alt="Overview" width="100%">
     <br>
@@ -293,6 +296,16 @@ namespace SampleListener.Consumers
     <img src="https://noxorg.dev/docs/images/vscode_sample-currency-created.png" alt="Overview" width="100%">
     <br>
 </div>
+
+Finally, let's recreate Bitcoin via the API as per the Postman screen below:
+
+<div align="center">
+    <img src="https://noxorg.dev/docs/images/postman_sample-currency-post-bitcoin.png" alt="Overview" width="100%">
+    <br>
+</div>
+
+We get confirmation via our application console that our ```CurrencyCreatedDomainEvent``` has been triggered and successfully picked up by our listener class:
+
 <div align="center">
     <img src="https://noxorg.dev/docs/images/terminal_sample-listener-currency-created-bitcoin.png" alt="Overview" width="100%">
     <br>
