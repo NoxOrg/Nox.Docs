@@ -67,7 +67,8 @@ export const SIDEBAR: Sidebar = {
 			{ text: 'Seeding Data', link: 'en/nox-lib-sample-seed-data' },
 			{ text: 'Getting to know Nox jobs', link: 'en/nox-lib-sample-jobs' },
 			{ text: 'Messaging Providers', link: 'en/nox-lib-sample-messaging' },
-			{ text: 'Bringing it all together', link: 'en/nox-lib-sample-seed-exchange-rates' },
+			{ text: 'Additional data types', link: 'en/nox-lib-sample-seed-exchange-rates' },
+			{ text: 'Adding your own code', link: 'en/nox-lib-sample-custom-controller' },
 		],
 		'Nox.Cli': [
 			{ text: 'About', link: 'en/nox-cli-about' },
