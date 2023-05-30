@@ -61,12 +61,23 @@ namespace SampleCurrencyService.Controllers
     }
 }
 ```
-Out project structure should be similar to the graphic below:
+Our project structure should be similar to the graphic below:
 
 <div align="center">
     <img src="https://noxorg.dev/docs/images/vscode_sample-new-controller.png" alt="Overview" width="100%">
     <br>
 </div>
+
+Let's restart our project and review Swagger to see if our new controller and associated endpoint have been created.
+
+<div align="center">
+    <img src="https://noxorg.dev/docs/images/browser_sample-swagger-getrates-japaneseyen.png" alt="Overview" width="100%">
+    <br>
+</div>
+
+As we can see from the graphic above, we do indeed have a new ```/GetRates``` endpoint that takes currency and optional asAt string parameters. 
+
+And if you wanted to see how much global inflation affected your [Apple Lobster](https://shorturl.at/rFMQV) stocking stuffer for *musuko-san* back in '21, the search might resonate.
 
 ### Nox.Generator
 
@@ -85,7 +96,7 @@ As per the Visual Studio graphic below, we've hightligted the auto-generated ```
 
 ### NoxDomainDbContext
 
-The auto-generated ```NoxDbContext.g.cs``` contatins both ```NoxDbContext``` as well as ```NoxDomainDbContext``` classes. The latter proves very useful in addressing our domain entities from our code editor, as illustrated in the graphic below:
+The auto-generated ```NoxDbContext.g.cs``` contains both ```NoxDbContext``` as well as ```NoxDomainDbContext``` classes. The latter proves very useful in addressing our domain entities from our code editor, as illustrated in the graphic below:
 
 <div align="center">
     <img src="https://noxorg.dev/docs/images/vscode_sample-noxdomaindbcontext-currency.png" alt="Overview" width="100%">
@@ -96,9 +107,9 @@ The auto-generated ```NoxDbContext.g.cs``` contatins both ```NoxDbContext``` as 
 
 There's nothing out of the ordinary in our custom controller per se—apart from ```NoxDomainDbContext``` perhaps, but it's worth highlighting one or two areas.
 
-As alluded to previously, we're injecting ```NoxDomainDbContext``` into our class instead of ```DbContext```. This provides us will all the expected database access behaviour along with the afore-mentioned domain properties.
+As alluded to previously, we're injecting ```NoxDomainDbContext``` into our class instead of ```DbContext```. This provides us with all the database access behaviour we'd expect, along with the afore-mentioned domain properties.
 
-Since ```NoxDomainDbContext``` extends ```DbContext``` we also have full access to EF Core LINQ facilities on the ```DbSet``` properties. We're doing method-syntax queries to find the currency and relevant exchange rate to match the currency and date parameters passed via the API.
+Since ```NoxDomainDbContext``` extends ```DbContext``` we also have full access to EF Core LINQ functionality on the ```DbSet``` properties. We're doing method-syntax queries to find the currency and relevant exchange rate to match the currency and date parameters passed via the API.
 
 <div align="center">
     <img src="https://noxorg.dev/docs/images/vscode_sample-getratescontroller-codehighlights.png" alt="Overview" width="100%">
