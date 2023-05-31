@@ -311,4 +311,4 @@ We get confirmation via our application console that our ```CurrencyCreatedDomai
     <br>
 </div>
 
-It's time to wrap up our project by adding [exchange rate data](./nox-lib-sample-seed-exchange-rates).
+It's time to add [exchange rate data](./nox-lib-sample-seed-exchange-rates) to our project.

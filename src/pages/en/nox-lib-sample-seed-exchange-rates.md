@@ -144,3 +144,5 @@ Doing a GET request on our ```/api/ExchangeRates(756)``` endpoint via Postman sh
     <img src="https://noxorg.dev/docs/images/postman_sample-currency-get-swissfranc.png" alt="Overview" width="100%">
     <br>
 </div>
+
+Now that we have all our input data available, let's look at how we can [customise our project](./nox-lib-sample-custom-controller).
