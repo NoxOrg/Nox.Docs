@@ -11,7 +11,13 @@ We're going to extend our project with a custom API endpoint that will do exactl
 
 ### Create a custom API controller
 
-Let's create a new controller class for our API as per the code snippet below and call it ```./Controllers/GetRatesController.cs```
+Let's start by adding the [Humanizer](https://www.nuget.org/packages/Humanizer.Core) package to our project. It's optional, but we like to keep things a little less formal around here.
+
+```powershell
+dotnet add package Humanizer
+```
+
+Next we'll create a new controller class for our API as per the code snippet below and call it ```./Controllers/GetRatesController.cs```
 
 ```csharp
 using Microsoft.AspNetCore.Mvc;
