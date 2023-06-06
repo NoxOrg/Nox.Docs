@@ -16,14 +16,14 @@ layout: ../../layouts/MainLayout.astro
 Nox lets you focus on your business problem and domain, and provides you with the following auto-magic features:
 
 - Declaration of your core application and domain (models, data, entities, attributes and bounded contexts) in a declaritive and easily maintainable way (YAML, using YamlDotNet)
-- Automatic (and selective) Create, Read, Update and Delete (CRUD) API for entities and/or aggregate roots (supports REST with OData, with GraphQL and gRPC in the making)
-- The choice of persisting your data in any database with current support for Sql Server, Postgress or MySql (using Entity Framework)
+- Automatic (and selective) Create, Read, Update and Delete (CRUD) API for entities and/or aggregate roots (supports REST with OData. GraphQL and gRPC support coming soon)
+- Persist your data to a number of popular database vendors including SQL Server, PostgreSQL or MySQL (using Entity Framework)
 - Automated Database Migrations (coming soon)
 - Validation of entities and attributes (using FluentValidation)
-- Logging, Observability and Monitoring (using SeriLog)
-- Events and Messaging (In process/Mediator, Azure Servicebus, Amazon SQS, RabbitMQ) using MassTransit
-- Extract-transform and load definitions from any database, file or API with bulk load and merge support
-- A task scheduler for running recurring tasks at periodic intervals (using Hangfire)
+- Logging (using SeriLog), Observability and Monitoring (using HangFire)
+- Events and Messaging (In process/Mediator, Azure Servicebus, Amazon SQS and RabbitMQ) using MassTransit
+- Extract, transform and load (ETL) definitions from any database, file or API with bulk-load and merge support
+- A task scheduler for running recurring tasks at periodic intervals (using HangFire)
 - Automated DevOps including testing and deployment
 
 ## Built With

@@ -31,7 +31,7 @@ Nox.Cli is declarative in nature with the primary aim of describing a project or
 - Support secure remote task execution
 
 
-** In conjunction with the [Nox.NET](https://github.com/NoxOrg/Nox) library
+** In conjunction with the [Nox.Lib](https://github.com/NoxOrg/Nox) library
 
 ### Built With
 ---

@@ -81,7 +81,7 @@ Let's restart our project and review Swagger to see if our new controller and as
     <br>
 </div>
 
-As we can see from the graphic above, we do indeed have a new ```/GetRates``` endpoint that takes currency and optional asAt string parameters. 
+As we can see from the graphic above, we do indeed have a new ```/GetRates``` endpoint that takes currency and optional asAt (date) string parameters. 
 
 And if you wanted to see how much global inflation affected your [Apple Lobster](https://shorturl.at/rFMQV) stocking stuffer for *musuko-san* back in '21, the search might resonate.
 
@@ -89,7 +89,7 @@ And if you wanted to see how much global inflation affected your [Apple Lobster]
 
 Now would be as good a time as any to peek under the hood and see what Nox is doing in the background with our design YAML files.
 
-At compile time [Nox.Generator](https://github.com/NoxOrg/Nox.Lib/tree/main/src/Nox.Generator), which extends Microsoft's [```ISourceGenerator```](https://learn.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.isourcegenerator?view=roslyn-dotnet-4.6.0) interface, generates class definitions of all of our defined entities.
+At compile time [Nox.Generator](https://github.com/NoxOrg/Nox.Lib/tree/main/src/Nox.Generator), which extends Microsoft's [```ISourceGenerator```](https://learn.microsoft.com/en-us/dotnet/api/microsoft.codeanalysis.isourcegenerator?view=roslyn-dotnet-4.6.0) interface, generates a class definition for each of our defined entities.
 
 If you have a look under your solution dependencies you'll notice an ```Analyzers``` section which lists the generated classes under the ```Nox.Generator``` section.
 

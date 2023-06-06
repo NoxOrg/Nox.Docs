@@ -28,7 +28,7 @@ dotnet tool install --global dotnet-ef
 ```
 
 ### Adding Packages to our project
-We're using Sql Server for our sample project, so we'll add the relevant EF Core package to our project. If you're using an alternative database provider you can check for the appropriate directive [here](https://learn.microsoft.com/en-us/ef/core/providers/?tabs=dotnet-core-cli).
+We're using SQL Server for our sample, so we'll add the relevant EF Core package to our project. If you're using an alternative database provider you can check for the appropriate directive [here](https://learn.microsoft.com/en-us/ef/core/providers/?tabs=dotnet-core-cli).
 
 ```powershell
 dotnet add package Microsoft.EntityFrameworkCore.SqlServer
@@ -60,4 +60,4 @@ Now we'll notice that our ```SampleCurrencyDb``` database has been created and t
 
 As expected, a simple Sql ```SELECT``` statement confirms that no data currently exists.
 
-Let's turn our attention to [adding additional entities](./nox-lib-sample-entities) to our project.
+Let's turn our attention to [adding additional entities](./nox-lib-sample-entities) to our solution.

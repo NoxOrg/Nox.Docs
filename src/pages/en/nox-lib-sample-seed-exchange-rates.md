@@ -7,8 +7,8 @@ layout: ../../layouts/MainLayout.astro
 ***
 It's time to wrap up our project with a final step, arguably the actual reason we started the project. Let's take a moment to recap all the components we've added to our microservice since its humble quick-start beginnings:
 
-- We started by considering the various entities and architecture of our microservice and neatly defined that in yaml files in our design folder.
-- The Nox library scaffolded the database provider of our choice with tables and indexes based on our yaml definitions in our design file.
+- We started by considering the various entities and architecture of our microservice and neatly defined them in yaml files in our solution design folder.
+- The Nox library scaffolded the database provider of our choice with tables and indexes based on the definitions in our solution design files.
 - We seeded data for our microservice by simply specifying the source and update strategy in our entity design files.
 - We reviewed the monitoring and observability of our microservice using the Hangfire console.
 - We added an additional messenger to our microservice and added listeners to react to entity state change.
@@ -19,7 +19,7 @@ You might recall that in an earlier step of our project where we [seeded currenc
 
 > 💡 Nox supports the import of several data formats including JSON, CSV, Excel, Parquet and XML.
 
-Let's take a closer look at the individual files. Open ```exchange-rate-seeddata.csv``` in a utility of your choice. We've chosen vscode:
+Let's take a closer look at the individual files. Open ```exchange-rate-seeddata.csv``` in a utility of your choice. We've chosen [Visual Studio Code](https://code.visualstudio.com/):
 
 <div align="center">
     <img src="https://noxorg.dev/docs/images/vscode_sample-csv-data.png" alt="Overview" width="100%">
@@ -59,7 +59,7 @@ Closer inspection of these files will reveal record count and date range detail 
 | exchange-rate-seeddata.xlsx    | 40,880  | 01/01/2021 | 31/12/2021 |
 | exchange-rate-seeddata.xml     | 40,223  | 01/01/2022 | 31/12/2022 |
 
-So, in addition to our currency and country JSON data, we have exchange rate information for 2020-2023 in four different formats. All that's left is to import the data into our sample exchange rate service.
+So, in addition to our currency and country JSON data, we have exchange rate information for 2020-2022 in four different formats. All that's left is to import the data into our sample exchange rate service.
 
 ### Adding exchange rates
 
@@ -102,7 +102,7 @@ sources:
 
 We specify all relevant data sources in the ```sources``` node in our loader file.
 
-Finally we'll tell our microservice about the location of this data by adding these additional sources to the ```dataSources``` node in our ```./Design/SampleCurrency.service.nox.yaml``` file as outlined in the code snippet below. You'll recall that we already have ```JsonSeedData``` specified from earlier in our project for country and currency data.
+Finally we'll tell our microservice about the location of this data by adding these additional sources to the ```dataSources``` node in our ```./Design/SampleCurrency.solution.nox.yaml``` file as outlined in the code snippet below. You'll recall that we already have ```JsonSeedData``` specified from earlier in our project for country and currency data.
 
 ```yaml
 dataSources:

@@ -5,13 +5,13 @@ description: Docs intro
 layout: ../../layouts/MainLayout.astro
 ---
 ***
-Let's add Country and Exchange Rate entities to our project next. We'll simply add new entity defintion files to our ```./Design``` folder.
+Let's add Country and Exchange Rate entities to our solution next. We'll simply add new entity defintion files to our ```./Design``` folder.
 
 ### Add Country entity
 
 Add a new ```./Design/Country``` folder and create the ```Country.entity.nox.yaml``` file.
 
-> 💡 We'll take this opportunity to add some additional country-related info fields that will prove useful for our Currency Exchange project later.
+> 💡 We'll take this opportunity to add some additional country-related info fields that will prove useful for our Currency Exchange solution later.
 
 ```yaml
 #
@@ -182,7 +182,7 @@ Let's add migrations and update the database to include our new ```Country``` an
 dotnet ef migrations add AddCountryExchangeRate --context NoxDbContext
 dotnet ef database update --context NoxDbContext
 ```
-Your project ```./Design``` folder should look like the graphic below now, and the new migrations have been added to the ```./Migrations``` folder:
+Your solution ```./Design``` folder should look like the graphic below now, and the new migrations have been added to the ```./Migrations``` folder:
 
 <div align="center">
     <img src="https://noxorg.dev/docs/images/vscode_design-folder-add-entities.png" alt="Overview" width="100%">
@@ -212,4 +212,4 @@ And if we expand the ER diagram of our ```Country``` and ```ExchangeRate``` tabl
     <br>
 </div>
 
-Next we'll move on to the exciting part, let's [source and import some data into our project](./nox-lib-sample-seed-data).
+Next we'll move on to the exciting part, let's [source and import some data into our solution](./nox-lib-sample-seed-data).

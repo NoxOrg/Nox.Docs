@@ -68,12 +68,12 @@ app.MapControllers();
 
 app.Run();
 ```
-### Define Your Service and Entities
+### Define Your Solution and Entities
 ---
-Create a new file to define your service called `SampleCurrency.service.nox.yaml`
+Create a new file to define your solution called `SampleCurrency.solution.nox.yaml`
 ```yaml
 #
-# SampleCurrency.service.nox.yaml
+# SampleCurrency.solution.nox.yaml
 #
 # yaml-language-server: $schema=https://noxorg.dev/schemas/NoxConfiguration.json
 #
@@ -132,9 +132,9 @@ attributes:
     type: string
     maxWidth: 5
 ```
-### Setup SqlServer with Docker
+### Setup SQL Server with Docker
 ---
-Create a `docker-compose.yaml` for running a Sql Server conatainer
+Create a `docker-compose.yaml` for running a SQL Server container
 ```yaml
 version: '3.7'
 
@@ -156,7 +156,7 @@ Then start your database with:
 ```bash
 docker-compose up -d
 ```
-### Start Your Service
+### Start your project
 ---
 Finally, start your API with:
 ```powershell
