@@ -12,7 +12,7 @@ Our system will require the ability to create and publish various system events 
 
 ### Adding message support in Nox
 
- By now you can probably guess that adding message support within our Nox project is as simple as updating our project design files. The good news is that you would be correct. We'll start by specifying our messenger(s) of choice in our service definition file.
+ By now you can probably guess that adding message support within our Nox solution is as simple as updating our solution design files. The good news is that you would be correct. We'll start by specifying our messenger(s) of choice in our solution definition file.
 
 You may have noticed in our quick-start project that we specified a messaging provider as per the code block below:
 
@@ -25,7 +25,7 @@ Again, this isn't a requirement since Nox will use this as its default under-the
 
 > 💡 MassTransit includes an implementation of the [Mediator pattern](https://en.wikipedia.org/wiki/Mediator_pattern) which runs in-process and in-memory with no transport required.
 
-We'll choose RabbitMQ for our sample project, so let's start by updating our ```./Design/SampleCurrency.service.nox.yaml``` file and substitute Mediator with RabbitMQ:
+We'll choose RabbitMQ for our sample project, so let's start by updating our ```./Design/SampleCurrency.solution.nox.yaml``` file and substitute Mediator with RabbitMQ:
 
 ```yaml
 messagingProviders:
@@ -34,7 +34,7 @@ messagingProviders:
     connectionString: rabbitmq://guest:guest@localhost/
 ```
 
-Our ```./Design/SampleCurrency.service.nox.yaml``` file should look similar to the graphic below now:
+Our ```./Design/SampleCurrency.solution.nox.yaml``` file should look similar to the graphic below now:
 
 <div align="center">
     <img src="https://noxorg.dev/docs/images/vscode_sample-messenger-define.png" alt="Overview" width="100%">
@@ -132,11 +132,11 @@ IHost host = Host.CreateDefaultBuilder(args)
 await host.RunAsync();
 ```
 
-As with our SampleCurrency project, let's create a ```./Design``` folder for our design files and start by creating ```./Design/SampleListener.service.nox.yaml``` with the code below:
+As with our SampleCurrency project, let's create a ```./Design``` folder for our design files and start by creating ```./Design/SampleListener.solution.nox.yaml``` with the code below:
 
 ```yaml
 #
-# SampleListener.service.nox.yaml
+# SampleListener.solution.nox.yaml
 #
 
 name: SampleListener
@@ -232,7 +232,9 @@ Running our SampleListener application reveals a few areas of interest. When we 
     <img src="https://noxorg.dev/docs/images/localhost_sample-rabbitmq-connections2.png" alt="Overview" width="100%">
     <br>
 </div>
+
 And in addition to the new connection, we'll notice that a ```currency-updated-event``` exchange has also been created.
+
 <div align="center">
     <img src="https://noxorg.dev/docs/images/localhost_sample-rabbitmq-exchanges2.png" alt="Overview" width="100%">
     <br>

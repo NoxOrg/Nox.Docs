@@ -5,7 +5,7 @@ description: Docs intro
 layout: ../../layouts/MainLayout.astro
 ---
 ***
-Now that we're extending our project, it's a good idea to get a bit more organised. We're going to create a new folder in the root of our project to keep all the configuration files that define the design of our Nox project.
+Now that we're extending our solution, it's a good idea to get a bit more organised. We're going to create a new folder in the root of our solution to keep all the configuration files that define the design of our Nox solution.
 
 We'll call it ```./Design```, but you can call it whatever you like.
 
@@ -26,9 +26,9 @@ Next we'll update our ```appsettings.json``` file by adding a dedicated Nox sect
   }
 }
 ```
-> 💡 The Nox library is intuitive enough to scan your project folder-tree to locate project design files. Strictly speaking the step outlined above isn't required, but it's a good practice to include it for the sake of clarity.
+> 💡 The Nox library is intuitive enough to scan your project folder tree to locate solution design files. Strictly speaking the step outlined above isn't required, but it's a good practice to include it for the sake of clarity.
 
-We'll follow this by moving the ```SampleCurrency.service.nox.yaml``` file that we've previously created from the root project folder into our newly created ```./Design``` folder.
+We'll follow this by moving the ```SampleCurrency.solution.nox.yaml``` file that we've previously created from the root folder into our newly created ```./Design``` folder.
 
 We'll also create a subfolder for each of our entities. For this example we'll move the ```Currency.entity.nox.yaml``` file into a ```./Design/Currency``` subfolder.
 

@@ -19,7 +19,7 @@ Let's start by creating a ```./Data``` folder in the root folder of our project 
 
 ### Creating a Loader file
 
-We can specify data sources for our project entities by adding a ```<your service>.loader.nox.yaml``` file in their relevant folders in the ```./Design``` directory.
+We can specify data sources for our solution entities by adding a ```<your solution>.loader.nox.yaml``` file in their relevant folders in the ```./Design``` directory.
 
 <div align="center">
     <img src="https://noxorg.dev/docs/images/vscode_sample-data-and-loaders.png" alt="Overview" width="100%">
@@ -91,7 +91,7 @@ sources:
 
 ### Specifying data source properties
 
-Now that we've specifed the sources of our data for our entities, we need to tell the extract module where to find this data. We'll head back to ```./Design/SampleCurrency.service.nox.yaml``` and add a new ```dataSources``` node to our file:
+Now that we've specifed the sources of our data for our entities, we need to tell the extract module where to find this data. We'll head back to ```./Design/SampleCurrency.solution.nox.yaml``` and add a new ```dataSources``` node to our file:
 
 ```yaml
 dataSources:

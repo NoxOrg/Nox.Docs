@@ -13,14 +13,14 @@ We're going to extend the simple currency service we created in the quick-start 
 </div>
 
 These are the steps we'll be undertaking:
-- Create some project order by moving our project and entity definition files into a central [design folder](./nox-lib-design-folder)
+- Create some project order by moving our solution and entity definition files into a central [design folder](./nox-lib-design-folder)
 - Take full control of our project's [database migrations](./nox-lib-sample-db-migrations) using EFCore Tools
 - Define additional country and exchange-rate [entities](./nox-lib-sample-entities) alongside our original currency entity
-- Configure our project to source [seed data](./nox-lib-sample-seed-data) from external sources for all/any of our project entities using Nox's built-in ETL module.
+- Configure our project to source [seed data](./nox-lib-sample-seed-data) from external sources for all/any of our solution entities using Nox's built-in ETL module.
 - Look at how [jobs](./nox-lib-sample-jobs) are scheduled and monitored using Hangfire
 - Add a [messenger](./nox-lib-sample-messaging) using MassTransit and set up event listeners
 
-> 💡 We're going to recreate our SampleCurrencyService project from scratch since we want to take full control of our database migrations. In our quick-start version, we had the ```autoMigrations=true``` property set in the ```SampleCurrency.service.nox.yaml``` design file. In a production environment, database migrations would typically be a more considered action.
+> 💡 We're going to recreate our SampleCurrencyService solution from scratch since we want to take full control of our database migrations. In our quick-start version, we had the ```autoMigrations=true``` property set in the ```SampleCurrency.solution.nox.yaml``` design file. In a production environment, database migrations would typically be a more considered action.
 
 ## Clean our previous project
 
@@ -39,11 +39,11 @@ Remove-Item -Recurse .\SampleCurrencyService
 
 ## Recreate our starting project
 
-Follow the [Quick-start guide](./nox-lib-quick-start-project) again up to the point before we run the project using the ```dotnet run``` command. The only change will be to set the ```autoMigrations=false``` directive in the ```SampleCurrency.service.nox.yaml``` design file as below.
+Follow the [Quick-start guide](./nox-lib-quick-start-project) again up to the point before we run the project using the ```dotnet run``` command. The only change will be to set the ```autoMigrations=false``` directive in the ```SampleCurrency.solution.nox.yaml``` design file as below.
 
 ```yaml
 #
-# SampleCurrency.service.nox.yaml
+# SampleCurrency.solution.nox.yaml
 #
 # yaml-language-server: $schema=https://noxorg.dev/schemas/NoxConfiguration.json
 #
@@ -66,4 +66,4 @@ messagingProviders:
     provider: mediator
 ```
 
-Let's take a look at the [design folder](./nox-lib-design-folder) and see how we'll be using that to organise our project.
+Let's take a look at the [design folder](./nox-lib-design-folder) and see how we'll be using that to organise our solution.

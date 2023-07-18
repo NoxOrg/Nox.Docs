@@ -20,7 +20,7 @@ The Nox.Cli tool is hosted on nuget.org [here](https://www.nuget.org/packages/No
 ```powershell
 dotnet tool install --global Nox.Cli
 ```
-Running the Nox.Cli tool installation with the global option yields the following output:
+Installing the Nox.Cli tool with the global option yields the following output:
 
 <div align="center">
     <img src="https://noxorg.dev/docs/images/nox-cli_install-clean.png" alt="Overview" width="100%">

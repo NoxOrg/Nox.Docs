@@ -28,4 +28,4 @@ From a development perspective, once the `solution design file(s)` are placed in
 ### DevOps Engineers
 From a DevOps Engineer perspective, the `solution definition file` is referenced via a series of command-line instructions that can create environments (DEV, UAT, PROD, etc.), set up version control repositories, user groups & permissions as well as commissioning databases.
 
-Let's [get started](./getting-started)
+Let's [get started](getting-started)
