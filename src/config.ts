@@ -75,7 +75,14 @@ export const SIDEBAR: Sidebar = {
 			{ text: 'Installation', link: 'en/nox-cli-installation' },
 			{ text: 'Sample Project', link: 'en/nox-cli-sample-project' },
 			{ text: 'Manifest File', link: 'en/nox-cli-manifest-file' },
+		],
+		/*
+		'Tools & Helpers': [
+			{ text: 'Nox.Cli', link: 'en/tools-nox-cli-full-page' },
+			{ text: 'Nox.Reference', link: 'en/tools-nox-reference-about' },
+			{ text: 'Nox.Types', link: 'en/tools-nox-types' }
 		]
+		*/
 	},
 };
 
