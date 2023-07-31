@@ -56,10 +56,10 @@ export const SIDEBAR: Sidebar = {
 		],
 		'Nox.Lib': [
 			{ text: 'About', link: 'en/nox-lib-about' },
-			{ text: 'Quick-start Project', link: 'en/nox-lib-quick-start-project' },
+			{ text: 'Build a Nox Solution', link: 'en/nox-lib-quick-start-project' },
 			{ text: 'Exploring the API', link: 'en/nox-lib-exploring-the-api' },
 		],
-		'Sample Project': [
+		'Extending Nox': [
 			{ text: 'Overview', link: 'en/nox-lib-sample-project-overview' },
 			{ text: 'The Design Folder', link: 'en/nox-lib-design-folder' },
 			{ text: 'Database Migrations', link: 'en/nox-lib-sample-db-migrations' },
