@@ -22,7 +22,7 @@ if (empty($tenant)) {
 }
 
 if ($requestedResource == 'templateInfo'){
-    $tenantFolder = '/home/noxorg/public_ftp/incoming/' . $tenant . '/';
+    $tenantFolder = '/home/noxorg/public_ftp/incoming/' . $tenant . '/templates';
 } else {
     $tenantFolder = '/home/noxorg/public_ftp/incoming/' . $tenant . '/' . $requestedResource;
 }
