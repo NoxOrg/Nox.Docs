@@ -21,12 +21,10 @@ if (empty($tenant)) {
     die();
 }
 
-//$tenantFolder = '/home/noxorg/public_ftp/incoming/' . $tenant . '/';
-
 if ($requestedResource == 'templateInfo'){
-    $tenantFolder = './aabbccdd/templates';
+    $tenantFolder = '/home/noxorg/public_ftp/incoming/' . $tenant . '/';
 } else {
-    $tenantFolder = './aabbccdd/' . $requestedResource;
+    $tenantFolder = '/home/noxorg/public_ftp/incoming/' . $tenant . '/' . $requestedResource;
 }
 
 if (!is_dir($tenantFolder)) {
