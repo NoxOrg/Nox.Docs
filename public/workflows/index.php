@@ -28,7 +28,7 @@ if ($requestedResource == 'templateInfo'){
 }
 
 if (!is_dir($tenantFolder)) {
-    http_response_code(404);
+    http_response_code(403);
     die();
 }
 
@@ -62,7 +62,7 @@ function returnFileResponse($tenantFolder, $requestedFile): void {
     $requestedFilePath = $tenantFolder.'/'.urldecode($requestedFile);
 
     if (!file_exists($requestedFilePath)) {
-        http_response_code(404);
+        http_response_code(405);
         die();
     }
     ob_clean();
