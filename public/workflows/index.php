@@ -14,18 +14,40 @@ if (!str_starts_with($targetFile, $thisFolder)) {
     die();
 }
 
-[$tenant,$requestedResource,$requestedFile] = explode('/',substr($targetFile, strlen($thisFolder)));
+$requestParameters = explode('/',substr($targetFile, strlen($thisFolder)));
+//[$tenant,$requestedResource,$requestedFile] = explode('/',substr($targetFile, strlen($thisFolder)));
+
+$tenant = $requestParameters[0];
+$requestedResource = $requestParameters[1];
+$requestedFile = null;
+
+if (count($requestParameters) == 3){
+    $requestedFile = $requestParameters[2];
+}
+
+echo 'tenant: ' . $tenant;
+echo 'requestedResource: ' . $requestedResource;
+echo 'requestedFile: ' . $requestedFile;
 
 if (empty($tenant)) {
     http_response_code(404);
     die();
 }
 
+//if ($requestedResource == 'templateInfo'){
+//    $tenantFolder = './aabbccdd/templates';
+//} else {
+//    $tenantFolder = './aabbccdd/' . $requestedResource;
+//}
+
 if ($requestedResource == 'templateInfo'){
     $tenantFolder = '/home/noxorg/public_ftp/incoming/' . $tenant . '/templates';
 } else {
     $tenantFolder = '/home/noxorg/public_ftp/incoming/' . $tenant . '/' . $requestedResource;
 }
+
+echo 'tenantFolder: ' . $tenantFolder;
+die;
 
 if (!is_dir($tenantFolder)) {
     http_response_code(403);
