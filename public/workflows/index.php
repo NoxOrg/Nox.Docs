@@ -14,16 +14,7 @@ if (!str_starts_with($targetFile, $thisFolder)) {
     die();
 }
 
-$requestParameters = explode('/',substr($targetFile, strlen($thisFolder)));
-//[$tenant,$requestedResource,$requestedFile] = explode('/',substr($targetFile, strlen($thisFolder)));
-
-$tenant = $requestParameters[0];
-$requestedResource = $requestParameters[1];
-$requestedFile = null;
-
-if (count($requestParameters) > 2){
-    $requestedFile = $requestParameters[2];
-}
+[$tenant,$requestedResource,$requestedFile] = explode('/',substr($targetFile, strlen($thisFolder)), 3);
 
 echo 'tenant: ' . $tenant;
 echo 'requestedResource: ' . $requestedResource;
