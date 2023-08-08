@@ -21,7 +21,7 @@ $tenant = $requestParameters[0];
 $requestedResource = $requestParameters[1];
 $requestedFile = null;
 
-if (count($requestParameters) == 3){
+if (count($requestParameters) > 2){
     $requestedFile = $requestParameters[2];
 }
 
