@@ -23,7 +23,7 @@ dotnet tool install --global Nox.Cli
 Installing the Nox.Cli tool with the global option yields the following output:
 
 <div align="center">
-    <img src="https://noxorg.dev/docs/images/nox-cli_install-clean.png" alt="Overview" width="100%">
+    <img src="https://noxorg.dev/docs/images/nox-cli_install-clean-2.png" alt="Overview" width="100%">
 </div>
 
 Running Nox.Cli for the first time yields the following output:
@@ -33,7 +33,7 @@ nox
 ```
 
 <div align="center">
-    <img src="https://noxorg.dev/docs/images/nox-cli_run-check-credentials.png" alt="Overview" width="100%">
+    <img src="https://noxorg.dev/docs/images/nox-cli_run-check-credentials-2.png" alt="Overview" width="100%">
     <br/>
     <br/>
 </div>
@@ -46,4 +46,4 @@ nox
     <br/>
 </div>
 
-> 💡 The second important thing to note is that apart from the `--version` and `--logout` commands, the additional commands listed above are dynamically added from the workflows folder in your local repository or from a script repository which is linked to your organisation, hosted at `https://noxorg.dev/workflows/{tenant.id}/index.php`
+> 💡 The second important thing to note is that apart from the `--version` and `--logout` commands, the additional commands listed above are dynamically added from the workflows folder in your local repository or from a script repository which is linked to your organisation, hosted at `https://noxorg.dev/workflows/{tenant.id}/scripts`. Tenant scripts which follow consistent patterns may be based on templates which is stored at `https://noxorg.dev/workflows/{tenant.id}/templates`. Examples of these may be CI/CD pipeline, Docker or Terraform scripts.
