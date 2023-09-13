@@ -79,7 +79,7 @@ This step will go and check the specified DevOps server and create our version c
 nox sync version-control
 ```
 <div align="center">
-    <img src="https://noxorg.dev/docs/images/nox-cli_sync-version-control.png" alt="Overview">
+    <img src="https://noxorg.dev/docs/images/nox-cli_sync-version-control-2.png" alt="Overview">
     <br/>
     <br/>
 </div>
@@ -97,7 +97,7 @@ Subsequent to running this command a cursory glance at our DevOps server will re
 nox sync azure-active-directory
 ```
 <div align="center">
-    <img src="https://noxorg.dev/docs/images/nox-cli_sync-azure-active-directory.png" alt="Overview">
+    <img src="https://noxorg.dev/docs/images/nox-cli_sync-azure-active-directory-2.png" alt="Overview">
     <br/>
     <br/>
 </div>
@@ -114,9 +114,10 @@ If you click on the Members link of the group you'll seet that the users are as 
     <img src="https://noxorg.dev/docs/images/portal-azure-com_group-members.png" alt="Overview">
     <br/>
 </div>
-
+<!--
 #### Database
 
+<!---
 ```powershell
 nox sync database
 ```
@@ -124,6 +125,7 @@ nox sync database
     <img src="https://noxorg.dev/docs/images/nox-cli_sync-database.png" alt="Overview">
     <br/>
 </div>
+-->
 
 #### Helm Chart
 
@@ -131,7 +133,7 @@ nox sync database
 nox sync helm-chart
 ```
 <div align="center">
-    <img src="https://noxorg.dev/docs/images/nox-cli_sync-helm-chart.png" alt="Overview">
+    <img src="https://noxorg.dev/docs/images/nox-cli_sync-helm-chart-2.png" alt="Overview">
     <br/>
     <br/>
 </div>
