@@ -15,9 +15,9 @@ docker-compose --version
 ```
 Create .NET 6.0 web api project at the command line in your repositories using `dotnet`
 ```powershell
-dotnet new webapi -o SampleCurrencyService
+dotnet new webapi -o Cryptocash
 
-cd SampleCurrencyService
+cd Cryptocash
 ```
 At this point you can do a normal `dotnet run` which will present you with the standard Microsoft demo WeatherController.
 
@@ -36,17 +36,17 @@ We specify this design folder in our project file so that they can be included a
 </ItemGroup>
 ```
 
-Create a new file in the `./.nox/design` folder to define your solution called `SampleCurrency.solution.nox.yaml`
+Create a new file in the `./.nox/design` folder to define your solution called `Cryptocash.solution.nox.yaml`
 ```yaml
 #
-# SampleCurrency.solution.nox.yaml
+# Cryptocash.solution.nox.yaml
 #
 # yaml-language-server: $schema=https://noxorg.dev/schemas/solution.json
 #
 
-name: SampleCurrencyService
+name: Cryptocash
 
-description: Sample Nox solution yaml configuration
+description: A sample solution for the imaginary Crypocash business
 
 domain:
 
@@ -59,7 +59,7 @@ infrastructure:
   persistence:
 
     databaseServer:
-      name: SampleCurrencyDb
+      name: Cryptocash
       provider: sqlServer
       options: Trusted_Connection=no;connection timeout=120;TrustServerCertificate=True
       serverUri: localhost
@@ -83,11 +83,7 @@ keys:
   - name: Id
     isRequired: true
     description: The currency's unique identifier 
-    type: text
-    textTypeOptions:
-      isUnicode: false
-      minLength: 3
-      maxLength: 3
+    type: currencyCode3
 
 attributes:
 
@@ -99,20 +95,17 @@ attributes:
       maxLength: 63
     isRequired: true
 
-  - name: ISO_Alpha3
-    description: The currency's official ISO 4217 alpha-3 code
-    type: text
-    textTypeOptions:
-      isUnicode: false
-      minLength: 3
-      maxLength: 3
-    isRequired: true
+  - name: CurrencyIsoNumeric
+    description: Currency's iso number id
+    type: currencyNumber     
+    isRequired: true 
 
   - name: Symbol
-    description: The currency's well known symbol
+    description: The currency's well-known symbol
     type: text
     textTypeOptions:
       maxLength: 5
+    isRequired: true
 ```
 
 Our project structure should look similar to the image below now
@@ -198,9 +191,9 @@ docker-compose up -d
 
 ### Database Migrations
 
-We'll use Microsoft's [Entity Framework Core tools](https://learn.microsoft.com/en-us/ef/core/get-started/overview/first-app?tabs=netcore-cli) to scaffold our ```SampleCurrencyDb``` database and ```Currency``` table.
+We'll use Microsoft's [Entity Framework Core tools](https://learn.microsoft.com/en-us/ef/core/get-started/overview/first-app?tabs=netcore-cli) to scaffold our ```Cryptocash``` database and ```Currency``` table.
 
-A glance at our Sql Server Docker instance will confirm that our ```SampleCurrencyDb``` project database has not yet been created.
+A glance at our Sql Server Docker instance will confirm that our ```Cryptocash``` project database has not yet been created.
 
 <div align="center">
     <img src="https://noxorg.dev/docs/images/vscode_database-before.png" alt="Overview" width="100%">
@@ -229,7 +222,7 @@ dotnet add package Microsoft.EntityFrameworkCore.Design
 #### Add & apply migrations
 ---
 ```powershell
-dotnet ef migrations add InitialCreate --context SampleCurrencyServiceDbContext
+dotnet ef migrations add InitialCreate --context CryptocashDbContext
 ```
 Once we've run the command we'll notice a new ```./Migrations``` folder in our project containing the newly scaffolded migration files.
 
@@ -241,9 +234,9 @@ Once we've run the command we'll notice a new ```./Migrations``` folder in our p
 Let's apply the migrations as per the code snipped below:
 
 ```powershell
-dotnet ef database update --context SampleCurrencyServiceDbContext
+dotnet ef database update --context CryptocashDbContext
 ```
-Now we'll notice that our ```SampleCurrencyDb``` database has been created and that it contains a ```Currency``` table with fields as per our ```./.nox/design/Currency.entity.nox.yaml``` definition.
+Now we'll notice that our ```Cryptocash``` database has been created and that it contains a ```Currency``` table with fields as per our ```./.nox/design/Currency.entity.nox.yaml``` definition.
 
 <div align="center">
     <img src="https://noxorg.dev/docs/images/vscode_database-after.png" alt="Overview" width="100%">
@@ -267,7 +260,7 @@ Alternatively, you can change the port your service uses by editing the `applica
 
 ```json
   "profiles": {
-    "SampleCurrencyService": {
+    "Cryptocash": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
