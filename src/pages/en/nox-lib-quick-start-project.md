@@ -7,13 +7,13 @@ layout: ../../layouts/MainLayout.astro
 ### The prep work
 ---
 
-Make sure you have .NET 6 and Docker installed on your PC.
+Make sure you have .NET 7 and Docker installed on your PC.
 ```powershell
 dotnet --version
 
 docker-compose --version
 ```
-Create .NET 6.0 web api project at the command line in your repositories using `dotnet`
+Create .NET 7.0 web api project at the command line in your repositories using `dotnet`
 ```powershell
 dotnet new webapi -o Cryptocash
 
