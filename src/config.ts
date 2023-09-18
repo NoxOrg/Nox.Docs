@@ -59,8 +59,9 @@ export const SIDEBAR: Sidebar = {
 			{ text: 'Build a Nox Solution', link: 'en/nox-lib-quick-start-project' },
 			{ text: 'Exploring the API', link: 'en/nox-lib-exploring-the-api' },
 		],
-		/*
 		'Extending Nox': [
+			{ text: 'The Nox Generator', link: 'en/nox-generator-overview' },
+			/*
 			{ text: 'Overview', link: 'en/nox-lib-sample-project-overview' },
 			{ text: 'The Design Folder', link: 'en/nox-lib-design-folder' },
 			{ text: 'Database Migrations', link: 'en/nox-lib-sample-db-migrations' },
@@ -70,8 +71,8 @@ export const SIDEBAR: Sidebar = {
 			{ text: 'Messaging Providers', link: 'en/nox-lib-sample-messaging' },
 			{ text: 'Additional data types', link: 'en/nox-lib-sample-seed-exchange-rates' },
 			{ text: 'Adding your own code', link: 'en/nox-lib-sample-custom-controller' },
+			*/
 		],
-		*/
 		'Nox.Cli': [
 			{ text: 'About', link: 'en/nox-cli-about' },
 			{ text: 'Installation', link: 'en/nox-cli-installation' },
