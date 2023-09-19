@@ -55,15 +55,58 @@ The DTOs implement additional error messages extrapolated from attribute propert
 
 ### Application: Commands
 
-Looking at the generated Command source files, you'll notice classes to for all the update actions: 
+Looking at the generated `Application.Commands.[command_name]` files, you'll notice that 4 source files have been generated for our `Currency` entity, corresponding with all the update endpoints: 
 
 <div align="center">
     <img src="https://noxorg.dev/docs/images/visual-studio_sample-nox-generator2-command.png" alt="Overview" width="100%">
     <br>
 </div>
 
-4 Command classes have been generated for our `Currency` entity:
-- The primary `Application.Commands.CreateCurrencyCommand.g.cs` which echoes our entity definition and generated class definition
-- The 'Create' DTO `Application.Commands.DeleteCurrencyByIdCommand.g.cs` which is used for all create (DELETE) endpoints.
-- The 'Update' DTO `Application.Commands.UpdateCurrencyCommand.g.cs` which is used for all update (PUT) endpoints.
-- The 'Update' DTO `Application.Commands.PartialUpdateCurrencyCommand.g.cs` which is used for all update (PATCH) endpoints.
+- `Application.Commands.CreateCurrencyCommand.g.cs` to create (POST) a new currency.
+- `Application.Commands.DeleteCurrencyByIdCommand.g.cs` to delete (DELETE) a currency with the required ID.
+- `Application.Commands.UpdateCurrencyCommand.g.cs` to update (PUT) a currency.
+- `Application.Commands.PartialUpdateCurrencyCommand.g.cs` to affect a partial update (PATCH) on a currency.
+
+### Application: Queries
+
+Looking at the generated `Application.Queries.[query_name]` files, you'll notice that 2 source files have been generated for our `Currency` entity, corresponding with both default read endpoints: 
+
+<div align="center">
+    <img src="https://noxorg.dev/docs/images/visual-studio_sample-nox-generator2-query.png" alt="Overview" width="100%">
+    <br>
+</div>
+
+- `Application.Queries.GetCurrenciesQuery.g.cs` retrieve (GET) a list of currencies.
+- `Application.Queries.GetCurrencyByIdQuery.g.cs` retrieve (GET) a currency matching the supplied ID.
+
+### Infrastructure
+
+You'll notice 2 generated Infrastructure files, both related to Persistence. These files are the result of the database settings that we defined in our Nox solution file under the `infrastructure > persistence > databaseServer` node.
+
+The Nox.Generator has created both `CryptocashDbContext` which extends `DbContext` as well as a `DtoDbContext` which can be used throughout our solution when we add any custom code.
+
+<div align="center">
+    <img src="https://noxorg.dev/docs/images/visual-studio_sample-nox-generator2-persistence.png" alt="Overview" width="100%">
+    <br>
+</div>
+
+### Presentation
+
+The generated source files prefixed with `Presentation.Api.[name]` applies to OData extension methods as well as the default OData controllers.
+
+`Presentation.Api.OData.CurrenciesController.g.cs` is the default OData controller generated for our `Currency` entity. It contains all the expected endpoints, `Get` with `GetById` overload, `Post`, `Put`, `Patch` and `Delete`.
+
+All the update methods called from these endpoints can be found in the respective `Application.Commands.[action].g.cs` generated files mentioned earlier.
+
+`Presentation.Api.OData.ODataServiceCollectionExtensions.g.cs` contains additional logic to register additional OData models or functions with the Nox runtime library.
+
+<div align="center">
+    <img src="https://noxorg.dev/docs/images/visual-studio_sample-nox-generator2-presentation.png" alt="Overview" width="100%">
+    <br>
+</div>
+
+### Conclusion
+
+The aim of this section was in no way to provide a definitive overview of the Nox.Generator, but rather to provide an introduction as to how you can start peeking under the hood of what Nox is doing.
+
+It will also aim us in understanding where our source material lies when we start extending the Nox solution with our own custom code.

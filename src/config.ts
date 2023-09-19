@@ -62,6 +62,7 @@ export const SIDEBAR: Sidebar = {
 		'Extending Nox': [
 			{ text: 'The Nox Generator', link: 'en/nox-generator-overview' },
 			/*
+			{ text: 'Adding Custom code', link: 'en/nox-lib-extending-overview' },
 			{ text: 'Overview', link: 'en/nox-lib-sample-project-overview' },
 			{ text: 'The Design Folder', link: 'en/nox-lib-design-folder' },
 			{ text: 'Database Migrations', link: 'en/nox-lib-sample-db-migrations' },
