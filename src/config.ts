@@ -60,9 +60,15 @@ export const SIDEBAR: Sidebar = {
 			{ text: 'Exploring the API', link: 'en/nox-lib-exploring-the-api' },
 		],
 		'Extending Nox': [
-			{ text: 'The Nox Generator', link: 'en/nox-generator-overview' },
 			/*
-			{ text: 'Adding Custom code', link: 'en/nox-lib-extending-overview' },
+			{ text: 'Customise Nox', link: 'en/nox-lib-extending-overview' },
+			*/
+			{ text: 'The Nox Generator', link: 'en/nox-generator-overview' },
+			{ text: 'API Endpoints', link: 'en/nox-lib-custom-endpoints' },
+			{ text: 'DTOs', link: 'en/nox-lib-custom-dtos' },
+			{ text: 'Queries', link: 'en/nox-lib-custom-queries' },
+			{ text: 'Commands', link: 'en/nox-lib-custom-commands' },
+			/*
 			{ text: 'Overview', link: 'en/nox-lib-sample-project-overview' },
 			{ text: 'The Design Folder', link: 'en/nox-lib-design-folder' },
 			{ text: 'Database Migrations', link: 'en/nox-lib-sample-db-migrations' },
