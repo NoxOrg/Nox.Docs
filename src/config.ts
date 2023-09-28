@@ -80,6 +80,9 @@ export const SIDEBAR: Sidebar = {
 			{ text: 'Adding your own code', link: 'en/nox-lib-sample-custom-controller' },
 			*/
 		],
+		'Nox Features': [
+			{ text: 'Environment Variables', link: 'en/nox-features-environment-variables' },
+		],
 		'Nox.Cli': [
 			{ text: 'About', link: 'en/nox-cli-about' },
 			{ text: 'Installation', link: 'en/nox-cli-installation' },
