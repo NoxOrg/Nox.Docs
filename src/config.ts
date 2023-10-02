@@ -59,6 +59,10 @@ export const SIDEBAR: Sidebar = {
 			{ text: 'Build a Nox Solution', link: 'en/nox-lib-quick-start-project' },
 			{ text: 'Exploring the API', link: 'en/nox-lib-exploring-the-api' },
 		],
+		'Nox Features': [
+			{ text: 'Environment Variables', link: 'en/nox-features-environment-variables' },
+			{ text: 'Entity Tags', link: 'en/nox-features-entity-tags' },
+		],
 		'Extending Nox': [
 			/*
 			{ text: 'Customise Nox', link: 'en/nox-lib-extending-overview' },
@@ -79,9 +83,6 @@ export const SIDEBAR: Sidebar = {
 			{ text: 'Additional data types', link: 'en/nox-lib-sample-seed-exchange-rates' },
 			{ text: 'Adding your own code', link: 'en/nox-lib-sample-custom-controller' },
 			*/
-		],
-		'Nox Features': [
-			{ text: 'Environment Variables', link: 'en/nox-features-environment-variables' },
 		],
 		'Nox.Cli': [
 			{ text: 'About', link: 'en/nox-cli-about' },
