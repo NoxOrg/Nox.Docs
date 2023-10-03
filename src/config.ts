@@ -61,7 +61,7 @@ export const SIDEBAR: Sidebar = {
 		],
 		'Nox Features': [
 			{ text: 'Environment Variables', link: 'en/nox-features-environment-variables' },
-			{ text: 'Entity Tags', link: 'en/nox-features-entity-tags' },
+			{ text: 'Optimistic Concurrency', link: 'en/nox-features-entity-tags' },
 		],
 		'Extending Nox': [
 			/*
