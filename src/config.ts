@@ -60,8 +60,9 @@ export const SIDEBAR: Sidebar = {
 			{ text: 'Exploring the API', link: 'en/nox-lib-exploring-the-api' },
 		],
 		'Nox Features': [
+			{ text: 'Domain Aggregation', link: 'en/nox-features-domain-aggregation' },
 			{ text: 'Environment Variables', link: 'en/nox-features-environment-variables' },
-			{ text: 'Optimistic Concurrency', link: 'en/nox-features-entity-tags' },
+			{ text: 'Optimistic Concurrency', link: 'en/nox-features-optimistic-concurrency' },
 		],
 		'Extending Nox': [
 			/*
