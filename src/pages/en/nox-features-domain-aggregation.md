@@ -12,14 +12,14 @@ Nox supports the *Aggregate* pattern in [Domain-Driven Design](https://en.wikipe
 
 If you'd like an overview of the Aggregate Pattern within DDD, [this excellent article](https://code-maze.com/csharp-design-pattern-aggregate/) over at [CodeMaze](https://code-maze.com/) does a great job explaining the concept, along with an illustrative use-case.
 
-### Creating an Aggregate Root
+### Working with Aggregate Roots
 
-The built-in code generation feature in Nox makes it very simple to enable *Domain Aggregation*. As with many of Nox's features, it is configured in the entity file.
+The built-in code generation feature in Nox makes it very simple to enable *Domain Aggregation*. As with many of Nox's features, it is configured in the entity design file.
 
-To create an *aggregate root* entity—also referred to as a *parent entity*—or convert an existing entity, we simply:
-- Add an `ownedRelationShips` node below the `attributes` in our entity design file
+To create an *aggregate* in a Nox solution, we simply:
+- In the *aggregate root* entity—also referred to as the *parent entity*, add an `ownedRelationShips` node below the `attributes` section in our entity design file
 - Give the relationship a descriptive name and specify the relationship type
-- Link it to a child/owned entity
+- Link it to the *owned entity*—also referred to as the *child entity*
 
 As the name suggests, `ownedRelationShips` enables an aggregate root to be linked to one or multiple entities.
 
@@ -38,7 +38,7 @@ ownedRelationships:
 
 ### Declaring an Owned Entity
 
-An *owned entity*—also referred to as a *child entity*—is created in the same way as any other entity in Nox, as long as the entity name matches the name assigned to the `entity` attribute in the `ownedRelationships` node of the parent entity definition file.
+An *owned entity*—also referred to as a *child entity*—is created in the same way as any other entity in Nox, as long as the entity name matches the name assigned to the `entity` attribute in the `ownedRelationships` node of the parent entity definition file. That's all there is to it.
 
 Add a new ```./Design/BankNote``` folder and create the ```BankNote.entity.nox.yaml``` file as per the code snippet below:
 
@@ -102,4 +102,4 @@ Now we'll notice if we refresh our ```Cryptocash``` database view, the `BankNote
     <br>
 </div>
 
-We have successfully converted our `Currency` entity into an aggregate root, and created an owned entity by linking the `BankNote` entity to it.
+We have successfully created a *Domain Aggregate* in our Nox solution by creating a `BankNote` entity and linking it to our `Currency` aggregate root.
