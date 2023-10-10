@@ -63,6 +63,7 @@ export const SIDEBAR: Sidebar = {
 			{ text: 'Domain Aggregation', link: 'en/nox-features-domain-aggregation' },
 			{ text: 'Environment Variables', link: 'en/nox-features-environment-variables' },
 			{ text: 'Optimistic Concurrency', link: 'en/nox-features-optimistic-concurrency' },
+			{ text: 'Entity Auditing', link: 'en/nox-features-entity-auditing' },
 		],
 		'Extending Nox': [
 			/*
