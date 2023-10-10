@@ -199,7 +199,7 @@ attributes:
 
 ### Creating event consumers
 
-Next we'll create a consumer class that reacts to a ```CurrencyUpdatedDomainEvent```. Start by creating a ```./Consumers``` folder in our project's root folder and add a new class called ```CurrencyUpatedConsumer.cs``` with the code below:
+Next we'll create a consumer class that reacts to a ```CurrencyUpdatedDomainEvent```. Start by creating a ```./Consumers``` folder in our project's root folder and add a new class called ```CurrencyUpdatedConsumer.cs``` with the code below:
 
 ```csharp
 using MassTransit;
@@ -292,7 +292,7 @@ namespace SampleListener.Consumers
 }
 ```
 
-> 💡 A few changes to notice, we're injecting a logger rather than ouputting to the console. Also take note of the ```EventSource```, ```EventType``` and ```Payload``` properties on ```context.Message```. Finally you'll notice the properties we specified on our ```./Design/Currency/Currency.entity.nox.yaml``` are available on ```context.Message.Payload```
+> 💡 A few changes to notice, we're injecting a logger rather than outputting to the console. Also take note of the ```EventSource```, ```EventType``` and ```Payload``` properties on ```context.Message```. Finally you'll notice the properties we specified on our ```./Design/Currency/Currency.entity.nox.yaml``` are available on ```context.Message.Payload```
 
 <div align="center">
     <img src="https://noxorg.dev/docs/images/vscode_sample-currency-created.png" alt="Overview" width="100%">
