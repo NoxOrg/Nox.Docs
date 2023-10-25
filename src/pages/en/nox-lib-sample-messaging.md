@@ -6,7 +6,7 @@ layout: ../../layouts/MainLayout.astro
 ---
 ***
 
-Our system will require the ability to create and publish various system events as well as the ability 'consume' or listen out and react to those events.
+Our system will require the ability to create and publish various system events as well as the ability to 'consume' or listen out and react to those events.
 
 > 💡 Nox uses the [MassTransit](https://masstransit.io/) library which provides an open-source distributed messaging framework with support for [Azure Service Bus](https://azure.microsoft.com/en-gb/products/service-bus/), [RabbitMQ](https://www.rabbitmq.com/), [Amazon SQS](https://aws.amazon.com/sqs/), [ActiveMQ](https://activemq.apache.org/), [Kafka](https://kafka.apache.org/) as well as a beta implementation of [gRPC](https://grpc.io/).
 
