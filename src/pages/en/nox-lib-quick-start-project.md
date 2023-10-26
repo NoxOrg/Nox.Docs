@@ -222,7 +222,7 @@ dotnet add package Microsoft.EntityFrameworkCore.Design
 #### Add & apply migrations
 ---
 ```powershell
-dotnet ef migrations add InitialCreate --context CryptocashDbContext
+dotnet ef migrations add InitialCreate --context AppDbContext
 ```
 Once we've run the command we'll notice a new ```./Migrations``` folder in our project containing the newly scaffolded migration files.
 
@@ -234,7 +234,7 @@ Once we've run the command we'll notice a new ```./Migrations``` folder in our p
 Let's apply the migrations as per the code snipped below:
 
 ```powershell
-dotnet ef database update --context CryptocashDbContext
+dotnet ef database update --context AppDbContext
 ```
 Now we'll notice that our ```Cryptocash``` database has been created and that it contains a ```Currency``` table with fields as per our ```./.nox/design/Currency.entity.nox.yaml``` definition.
 
