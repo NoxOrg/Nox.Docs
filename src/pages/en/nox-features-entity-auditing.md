@@ -55,8 +55,8 @@ That's all it takes to turn on auditability on any entity within our Nox solutio
 We'll add migrations and update the Cryptocash database:
 
 ```powershell
-dotnet ef migrations add AddExchangeRate --context CryptocashDbContext
-dotnet ef database update --context CryptocashDbContext
+dotnet ef migrations add AddExchangeRate --context AppDbContext
+dotnet ef database update --context AppDbContext
 ```
 
 Let's have a closer look at what the Nox.Generator have done as well as the resultant migration.

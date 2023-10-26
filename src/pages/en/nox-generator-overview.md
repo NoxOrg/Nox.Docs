@@ -16,7 +16,7 @@ In a code editor that enables you to view generated source code, like [Visual St
     <br>
 </div>
 
-You'll be presented with the full list of source files that the **Nox.Generator** has generated. The first file of interest that we'll look at is `0.Generator.g.cs`. This files gives us an overview of the generator process and whether it was successfull or not.
+You'll be presented with the full list of source files that the **Nox.Generator** has generated. The first file of interest that we'll look at is `0.Generator.g.cs`. This files gives us an overview of the generator process and whether it was successful or not.
 
 Viewing the file in the code editor confirms that it found 2 files, our Nox solution file `Cryptocash.solution.nox.yaml` as well as the single entity which we've defined at this stage `Currency.entity.nox.yaml`.
 
@@ -83,7 +83,7 @@ Looking at the generated `Application.Queries.[query_name]` files, you'll notice
 
 You'll notice 2 generated Infrastructure files, both related to Persistence. These files are the result of the database settings that we defined in our Nox solution file under the `infrastructure > persistence > databaseServer` node.
 
-The Nox.Generator has created both `CryptocashDbContext` which extends `DbContext` as well as a `DtoDbContext` which can be used throughout our solution when we add any custom code.
+The Nox.Generator has created both `AppDbContext` which indirectly extends `DbContext` as well as a `DtoDbContext` which can be used throughout our solution when we add any custom code.
 
 <div align="center">
     <img src="https://noxorg.dev/docs/images/visual-studio_sample-nox-generator2-persistence.png" alt="Overview" width="100%">

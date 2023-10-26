@@ -81,7 +81,7 @@ persistence:
 Let's add a database migration for our new `BankNote` entity and apply it to the `Cryptocash` database.
 
 ```powershell
-dotnet ef migrations add AddBankNote --context CryptocashDbContext
+dotnet ef migrations add AddBankNote --context AppDbContext
 ```
 Have a look in the ```./Migrations``` folder and you'll notice that in addition to the normal `<timestamp>_AddBankNote.cs` migration, there is also a `<timestamp>_AddBankNoteOwned.cs` migration which takes care of configuring all the database settings for the child entity.
 
@@ -93,7 +93,7 @@ Have a look in the ```./Migrations``` folder and you'll notice that in addition 
 Let's apply the migrations as per the code snippet below:
 
 ```powershell
-dotnet ef database update --context CryptocashDbContext
+dotnet ef database update --context AppDbContext
 ```
 Now we'll notice if we refresh our ```Cryptocash``` database view, the `BankNote` table has been created along with the additional *owned entity* attributes like the `CurrencyId` field and the `FK_BankNote_Currencies_CurrencyId` key linking it to its parent.
 
