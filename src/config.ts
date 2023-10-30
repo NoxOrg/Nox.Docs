@@ -65,6 +65,7 @@ export const SIDEBAR: Sidebar = {
 			{ text: 'Optimistic Concurrency', link: 'en/nox-features-optimistic-concurrency' },
 			{ text: 'Entity Auditing', link: 'en/nox-features-entity-auditing' },
 			{ text: 'Event Sourcing', link: 'en/nox-features-event-sourcing' },
+			{ text: 'Logging', link: 'en/nox-features-logging' },
 		],
 		'Extending Nox': [
 			/*
