@@ -7,13 +7,13 @@ layout: ../../layouts/MainLayout.astro
 ***
 Nox offers several ways to customise commands. They are:
 
-- Extend the generated command handler by overriding the `OnExecuting` and/or `OnCompleted` methods.
+- Extend the generated command handler by overriding the `OnExecutingAsync` and/or `OnCompletedAsync` methods.
 - Access non-entity properties that we created on our custom DTOs.
 - Override the `Handle` method of the generated handler to completely implement your own command handler. 
 
 ## Change Request or Entity
 
-During execution of the command we can modify the request by overriding the `OnExecuting` method of the base command handler. We can also modify the content of the command entity by overriding the `OnCompleted` method. Note also that we have access to the additional properties that we added to our custom DTO earlier.
+During execution of the command we can modify the request by overriding the `OnExecutingAsync` method of the base command handler. We can also modify the content of the command entity by overriding the `OnCompletedAsync` method. Note also that we have access to the additional properties that we added to our custom DTO earlier.
 
 See the code snippet below for an example:
 
@@ -24,9 +24,9 @@ using Microsoft.IdentityModel.Tokens;
 
 namespace Cryptocash.Application.Commands;
 
-public partial class CreateCurrencyCommandHandler
+internal partial class CreateCurrencyCommandHandler
 {
-    protected override void OnExecuting(CreateCurrencyCommand request)
+    protected override async Task OnExecutingAsync(CreateCurrencyCommand request)
     {
         if (request.EntityDto.ISO_Alpha3.IsNullOrEmpty())
         {
@@ -34,7 +34,7 @@ public partial class CreateCurrencyCommandHandler
         }
     }
 
-    protected override void OnCompleted(CreateCurrencyCommand request, Currency entity)
+    protected override async Task OnCompletedAsync(CreateCurrencyCommand request, Currency entity)
     {
         entity.Name = Nox.Types.Text.From(entity.Name.Value.Titleize());
 
@@ -58,8 +58,8 @@ using Cryptocash.Application.Dto;
 
 namespace Cryptocash.Application.Commands;
 
-public partial class CreateCurrencyCommandHandler 
-{    
+internal partial class CreateCurrencyCommandHandler
+{
     public override async Task<CurrencyKeyDto> Handle(CreateCurrencyCommand request, CancellationToken cancellationToken)
     {
         // Custom code to implement the handler

@@ -22,7 +22,7 @@ using Cryptocash.Application.Dto;
 
 namespace Cryptocash.Application.Queries;
 
-public partial class GetCurrencyByIdQueryHandler
+internal partial class GetCurrencyByIdQueryHandler
 {
     public override Task<IQueryable<CurrencyDto>> Handle(GetCurrencyByIdQuery request, CancellationToken cancellationToken)
     {
@@ -45,7 +45,7 @@ using Microsoft.IdentityModel.Tokens;
 
 namespace Cryptocash.Application.Queries;
 
-public partial class GetCurrenciesQueryHandler
+internal partial class GetCurrenciesQueryHandler
 {
     protected override IQueryable<CurrencyDto> OnResponse(IQueryable<CurrencyDto> response)
     {
