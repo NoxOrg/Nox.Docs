@@ -48,7 +48,7 @@ persistence:
 
 Of specific interest here is the inclusion of the `isAudited: true` attribute under the `persistence` node.
 
-> ⚠️ Within Nox, entity auditing is disabled at child/[owned entity](https://noxorg.dev/en/nox-features-domain-aggregation/#declaring-an-owned-entity) level. For owned entities, ensure that auditing is set at the parent/[aggregate root](https://noxorg.dev/en/nox-features-entity-auditing) entity level.
+> ⚠️ Within Nox, child/[owned entities](https://noxorg.dev/en/nox-features-domain-aggregation/#declaring-an-owned-entity) are not directly auditable. For these entity types, ensure that auditing is set at the parent/[aggregate root](https://noxorg.dev/en/nox-features-entity-auditing) level.
 
 That's all it takes to turn on auditability on any entity within our Nox solution.
 
