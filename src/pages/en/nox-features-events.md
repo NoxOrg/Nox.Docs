@@ -1,17 +1,15 @@
 ---
-title: Event Sourcing
+title: Event in Nox
 category: Nox.Lib
 description: Docs intro
 layout: ../../layouts/MainLayout.astro
 ---
 ***
-Nox has a feature-rich toolset that supports a comprehensive implementation of the Event Sourcing pattern.
+Nox has a feature-rich toolset that supports a comprehensive implementation of its event driven architecture.
 
 ### Nox Event Features
-- Chronological stream of immutable domain events that represent the source of truth of business facts within your application
 - Domain events reflect entity state and operate within the bounded context of the application domain.
 - Integration events are visible to—and can be consumed by—external application services
-- Stored events include both entity state as well as change context, thus enabling a chronological record of entity state over time
 - Complex workflows can be implemented through the built-in event notification and subscription features. 
 - Service autonomy enables systems to catch-up/synchronize after service interruptions
 - Event streams offer full observability and analytical tools

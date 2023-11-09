@@ -12,9 +12,9 @@ The first—and most important—part of realizing our sample project will be cr
 ### Developer
 We're going to use our code-editor of choice to create the `solution definition yaml` file. We'll add the Nox library to our souce code, build our solution and we'll be up & running with a simple currency microservice with all the expected CRUD endpoints.
 
-I'm a developer, [get me outta here](nox-lib-quick-start-project)
+I'm a developer, [get me outta here](https://noxorg.dev/en/nox-lib-quick-start-project)
 
 ### DevOps engineer
 We're going to use the Nox.Cli tool to define our solution and scaffold our entire environment, including version-control repository, project team, deployment environments, and database.
 
-I like clicking ⚙️, [let's do this](nox-cli-installation)
+I like clicking ⚙️, [let's do this](https://noxorg.dev/en/nox-cli-installation)
