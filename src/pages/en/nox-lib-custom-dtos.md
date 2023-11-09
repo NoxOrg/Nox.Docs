@@ -12,9 +12,9 @@ Nox offers several ways to customise DTOs. They include:
 
 ## Extending Generated DTOs
 
-As detailed in the [Application DTO section](nox-generator-overview#application-dtos) of our Nox.Generator overview, a `<entity name>Dto`, `<entity name>CreateDto` and `<entity name>UpdateDto` is generated for each of the entities defined in our Nox solution.
+As detailed in the [Application DTO section](https://noxorg.dev/en/nox-generator-overview/#application-dtos) of our Nox.Generator overview, a `<entity name>Dto`, `<entity name>CreateDto` and `<entity name>UpdateDto` is generated for each of the entities defined in our Nox solution.
 
-We can extend of the the generated partial classes and add our own custom propterties to the DTOs. Modifying the properties in the `<entity name>CreateDto` will apply to the `Post` method in the OData endpoint. Similarly, modifying the properties in the `<entity name>UpdateDto` will apply to the `Put` and `Patch` methods in the OData endpoint.
+We can extend of the the generated partial classes and add our own custom properties to the DTOs. Modifying the properties in the `<entity name>CreateDto` will apply to the `Post` method in the OData endpoint. Similarly, modifying the properties in the `<entity name>UpdateDto` will apply to the `Put` and `Patch` methods in the OData endpoint.
 
 See the code snippet below for an example:
 
