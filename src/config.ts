@@ -66,6 +66,7 @@ export const SIDEBAR: Sidebar = {
 			{ text: 'Entity Auditing', link: 'en/nox-features-entity-auditing' },
 			{ text: 'Nox Events', link: 'en/nox-features-events' },
 			{ text: 'Logging', link: 'en/nox-features-logging' },
+			{ text: 'Localization', link: 'en/nox-features-localization' },
 		],
 		'Extending Nox': [
 			/*
