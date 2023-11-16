@@ -1,5 +1,5 @@
 ---
-title: Event in Nox
+title: Events in Nox
 category: Nox.Lib
 description: Docs intro
 layout: ../../layouts/MainLayout.astro

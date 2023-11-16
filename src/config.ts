@@ -67,6 +67,7 @@ export const SIDEBAR: Sidebar = {
 			{ text: 'Nox Events', link: 'en/nox-features-events' },
 			{ text: 'Logging', link: 'en/nox-features-logging' },
 			{ text: 'Localization', link: 'en/nox-features-localization' },
+			{ text: 'API Versioning', link: 'en/nox-features-api-versioning' },
 		],
 		'Extending Nox': [
 			/*
