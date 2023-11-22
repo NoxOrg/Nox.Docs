@@ -72,7 +72,7 @@ integrationEvents:
   - name: TopCryptoCurrency
     description: Top rated cryptocurrency added to system
     type: object
-    trait: Currency
+    domainContext: Currency
     objectTypeOptions:
       attributes:
         - name: Name
@@ -84,6 +84,8 @@ integrationEvents:
         - name: Rating
           type: number
 ```
+
+> 💡 The `DomainContext` property is used to identify either the EntityName, BusinessProcessName or BoundedContext that the event pertains to.
 
 Notice that the Nox library generates the custom event declaration `Application.IntegrationEvents/TopCryptoCurrency.g.cs`
 
