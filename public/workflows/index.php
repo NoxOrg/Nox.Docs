@@ -74,22 +74,13 @@ function returnScriptIndex($tenantDirectory): void
 {
     // Initialize an empty array to store the file data
     $file_data = array();
-
-    // Search the directory for files ending with '.nox.yaml'
-    $files = glob($tenantDirectory . '/*.nox.yaml');
-
-    // Loop through the files
-    foreach ($files as $file) {
-    
-        // Get the file size
-        $size = filesize($file);
-
-        // Get the SHA checksum of the file
-        $shaChecksum = hash_file('sha256', $file);
-
-        // Add the file data to the array
+    $scriptList = scanAllDir($tenantDirectory);
+    foreach($scriptList as $script) {
+        $filePath = $tenantDirectory . '/' . $script;
+        $size = filesize($filePath);
+        $shaChecksum = hash_file('sha256', $filePath);
         $file_data[] = [
-            'name' => basename($file),
+            'name' => $script,
             'size' => $size,
             'shaChecksum' => $shaChecksum
         ];
