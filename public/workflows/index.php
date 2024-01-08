@@ -21,7 +21,7 @@ if (empty($tenant)) {
     die();
 }
 
-if ($requestedResource == 'templateInfo'){
+if ($requestedResource == 'fileInfo'){
     $tenantFolder = '/home/noxorg/public_ftp/incoming/' . $tenant . '/templates';
 } else {
     $tenantFolder = '/home/noxorg/public_ftp/incoming/' . $tenant . '/' . $requestedResource;
@@ -35,26 +35,19 @@ if (!is_dir($tenantFolder)) {
 header('Content-Type: text/x-yaml');
 
 switch ($requestedResource) {
-    case "scripts":
-        if (empty($requestedFile)) {
-            returnScriptIndex($tenantFolder);
-        } else {
-            returnFileResponse($tenantFolder, $requestedFile);
-        }
-        break;
-    case "templates":
-        if (empty($requestedFile)){
-            returnTemplateIndex($tenantFolder);
-        } else {
-            returnFileResponse($tenantFolder, $requestedFile);
-        }
-        break;
-    case "templateInfo":
+    case "fileInfo":
         if (empty($requestedFile)) {
             http_response_code(404);
             die();
         }
-        returnTemplateInfo($tenantFolder, $requestedFile);
+        returnFileInfo($tenantFolder, $requestedFile);
+        break;
+    default:
+        if (empty($requestedFile)) {
+            returnFileIndex($tenantFolder);
+        } else {
+            returnFileResponse($tenantFolder, $requestedFile);
+        }
         break;
 }
 
@@ -70,7 +63,7 @@ function returnFileResponse($tenantFolder, $requestedFile): void {
     echo file_get_contents($requestedFilePath);
 }
 
-function returnScriptIndex($tenantDirectory): void
+function returnFileIndex($tenantDirectory): void
 {
     // Initialize an empty array to store the file data
     $file_data = array();
@@ -92,26 +85,7 @@ function returnScriptIndex($tenantDirectory): void
   
 }
 
-function returnTemplateIndex($tenantDirectory): void {
-    $file_data = [];
-    $templateList = scanAllDir($tenantDirectory);
-    foreach($templateList as $template) {
-        $filePath = $tenantDirectory . '/' . $template;
-        $size = filesize($filePath);
-        $shaChecksum = hash_file('sha256', $filePath);
-        $file_data[] = [
-            'name' => $template,
-            'size' => $size,
-            'shaChecksum' => $shaChecksum
-        ];
-    }
-
-    // Convert the file data to JSON and output it
-    header('Content-Type: application/json');
-    echo json_encode($file_data);
-}
-
-function returnTemplateInfo($tenantDirectory, $requestedFile): void {
+function returnFileInfo($tenantDirectory, $requestedFile): void {
     $filePath = urldecode($requestedFile);
     $file = $tenantDirectory . '/' . $filePath;
     $size = filesize($file);
