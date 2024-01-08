@@ -21,8 +21,10 @@ if (empty($tenant)) {
     die();
 }
 
-if ($requestedResource == 'fileInfo'){
+if ($requestedResource == 'templateInfo'){
     $tenantFolder = '/home/noxorg/public_ftp/incoming/' . $tenant . '/templates';
+} elseif ($requestedResource == 'scriptInfo') {
+    $tenantFolder = '/home/noxorg/public_ftp/incoming/' . $tenant . '/scripts';
 } else {
     $tenantFolder = '/home/noxorg/public_ftp/incoming/' . $tenant . '/' . $requestedResource;
 }
@@ -35,7 +37,8 @@ if (!is_dir($tenantFolder)) {
 header('Content-Type: text/x-yaml');
 
 switch ($requestedResource) {
-    case "fileInfo":
+    case "templateInfo":
+    case "scriptInfo":
         if (empty($requestedFile)) {
             http_response_code(404);
             die();
